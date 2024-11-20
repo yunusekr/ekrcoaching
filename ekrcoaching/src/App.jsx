@@ -7,6 +7,7 @@ import veriler from "./veriler";
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 import Header from "./components/Header";
 import HomePage from "./components/HomePage";
+import Footer from "./components/Footer";
 
 function App() {
   const [datas, Setdatas] = useState({});
@@ -26,6 +27,7 @@ function App() {
           <HomePage datas={datas} />
         </Route>
       </Switch>
+      <Footer datas={datas} />
     </>
   );
 }

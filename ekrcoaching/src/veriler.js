@@ -8,6 +8,12 @@ const veriler = {
     Mission: "Misyon",
     Values: "Değerler",
     Contact: "İletişim",
+    Wearelisteningtoyou: "Sizi Dinliyoruz",
+    Institutional: "Kurumsal",
+    Individual2: "Bireysel",
+    Coaching: "Koçluk",
+    Mentoring: "Mentorluk",
+    Consulting: "Danışmanlık",
   },
   english: {
     Individual: "Individual",
@@ -18,6 +24,12 @@ const veriler = {
     Mission: "Mission",
     Values: "Values",
     Contact: "Contact",
+    Wearelisteningtoyou: "We Are Listening To You",
+    Institutional: "Institutional",
+    Individual2: "Individual",
+    Coaching: "Coaching",
+    Mentoring: "Mentoring",
+    Consulting: "Consulting",
   },
 };
 

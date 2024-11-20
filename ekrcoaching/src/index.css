@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.deneme {
+  font-family: "Lora";
+  text-shadow: -8px -4px 4px rgba(0, 0, 0, 0.3);
+  font-style: italic;
+}
