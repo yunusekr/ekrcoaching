@@ -1,9 +1,12 @@
 import React from "react";
 import veriler from "../veriler";
-import logo from "../assets/ekrlogo.png";
+import logotr from "../assets/ekrlogo(tr2).png";
+import logoing from "../assets/ekrlogo(eng2).png";
 import ing from "../assets/ing.png";
 import tr from "../assets/tr.png";
 import "../cssfiles/dropdownmenu.css";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+
 function Header({ datas, setdata }) {
   const changelanguage = (event) => {
     if (event.target.id == "turkish") {
@@ -14,148 +17,150 @@ function Header({ datas, setdata }) {
       localStorage.setItem("language", "english");
     }
   };
+
   return (
-    <div className="w-full flex justify-between items-center border-black">
+    <div
+      className="w-full flex justify-center gap-[7rem] items-center z-[100] relative diagonal-div sticky top-0 bg-white"
+      style={{
+        boxShadow: "0px 0.5px 4px 0.5px black",
+
+        zIndex: 1000, // Optional, in case you have other overlapping elements
+      }}
+    >
       {/* Using placeholder image for logo */}
-      <img className="w-[300px] h-[150px]" src={logo} alt="logo" />
-      <div className="flex gap-6">
-        {/* 1.Menu Bar*/}
-        <div className="menu">
-          <div className="item">
-            <a href="#" className="link">
-              <span>{datas.Individual}</span>
-              <svg viewBox="0 0 360 360" xmlSpace="preserve">
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    id="XMLID_225_"
-                    d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
-                  />
-                </g>
-              </svg>
-            </a>
-            <div className="submenu">
-              <div className="submenu-item has-submenu">
-                <a href="#" className="submenu-link trainings">
-                  {datas.Trainings}
-                  <svg
-                    className="submenu-arrow"
-                    viewBox="0 0 360 360"
-                    xmlSpace="preserve"
-                  >
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        id="XMLID_225_"
-                        d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
-                      />
-                    </g>
-                  </svg>
-                </a>
-                <div className="nested-submenu">
-                  <div className="submenu-item">
-                    <a href="#" className="submenu-link">
-                      {datas.Institutional}
-                    </a>
-                  </div>
-                  <div className="submenu-item">
-                    <a href="#" className="submenu-link">
-                      {datas.Individual2}
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="submenu-item has-submenu">
-                <a href="#" className="submenu-link trainings">
-                  {datas.Services}
-                  <svg
-                    className="submenu-arrow"
-                    viewBox="0 0 360 360"
-                    xmlSpace="preserve"
-                  >
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        id="XMLID_225_"
-                        d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
-                      />
-                    </g>
-                  </svg>
-                </a>
-                <div className="nested-submenu">
-                  <div className="submenu-item">
-                    <a href="#" className="submenu-link">
-                      {datas.Coaching}
-                    </a>
-                  </div>
-                  <div className="submenu-item">
-                    <a href="#" className="submenu-link">
-                      {datas.Mentoring}
-                    </a>
-                  </div>
-                  <div className="submenu-item">
-                    <a href="#" className="submenu-link">
-                      {datas.Consulting}
-                    </a>
-                  </div>
-                </div>
-              </div>
+      <img
+        className="w-[75px] h-[60px]"
+        src={
+          localStorage.getItem("language") == "turkish" ||
+          localStorage.getItem("language") == null
+            ? logotr
+            : logoing
+        }
+        alt="logo"
+      />
+      <nav>
+        <div className="container">
+          <div className="row">
+            <div className="mobile_btn">
+              <i className="fas fa-bars"></i>
+            </div>
+            <div className="main_menu">
+              <ul className="flex gap-10">
+                <li className="has_dropdown">
+                  <a href="/">{datas.Homepage}</a>
+                </li>
+                <li className="has_dropdown">
+                  <a href="/aboutus">{datas.AboutUs}</a>
+                  {/* <ul className="sub_menu">
+                    <li className="has_dropdown">
+                      <a href="#">{datas.Vision}</a>
+                    </li>
+                    <li className="has_dropdown">
+                      <a href="#">{datas.Mission}</a>
+                    </li>
+                    <li className="has_dropdown">
+                      <a href="#">{datas.Values}</a>
+                    </li>
+                  </ul> */}
+                </li>
+                <li className="has_dropdown">
+                  <a href="#">
+                    {datas.Trainings} <i className="fas fa-angle-down"></i>
+                  </a>
+                  <ul className="sub_menu">
+                    <li className="has_dropdown">
+                      <a href="#">
+                        {datas.Institutional}{" "}
+                        <i className="fas fa-angle-right"></i>
+                      </a>
+                      <ul className="sub_menu">
+                        <li>
+                          <a href="/salesandmarketing">
+                            {datas.SalesMarketingTechniques}
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/noro">{datas.NeuroSales}</a>
+                        </li>
+                        <li>
+                          <a href="/timemanagement">{datas.TimeManagement}</a>
+                        </li>
+                        <li>
+                          <a href="#">{datas.Leadership}</a>
+                        </li>
+                        <li>
+                          <a href="#">{datas.CommunicationSkills}</a>
+                        </li>
+                        <li>
+                          <a href="#">{datas.Theartofsayingno}</a>
+                        </li>
+                        <li>
+                          <a href="#">{datas.Costmanagement}</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="has_dropdown">
+                      <a href="#">
+                        {datas.Individual}{" "}
+                        <i className="fas fa-angle-right"></i>
+                      </a>
+                      <ul className="sub_menu">
+                        <li className="has_dropdown">
+                          <a href="#">{datas.GoalSettingModelling} </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li className="has_dropdown">
+                  <a href="#">
+                    {datas.Services} <i className="fas fa-angle-down"></i>
+                  </a>
+
+                  <ul className="sub_menu">
+                    <li className="has_dropdown">
+                      <a href="#">{datas.Coaching}</a>
+                    </li>
+                    <li className="has_dropdown">
+                      <a href="#">{datas.Mentoring}</a>
+                    </li>
+                    <li className="has_dropdown">
+                      <a href="#">
+                        {datas.Consulting}{" "}
+                        <i className="fas fa-angle-right"></i>
+                      </a>
+                      <ul className="sub_menu">
+                        <li>
+                          <a href="#">{datas.Salesandmarketingconsultancy}</a>
+                        </li>
+                        <li>
+                          <a href="#">{datas.Exportconsultancy}</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li className="has_dropdown">
+                  <a href="/contact">{datas.Contact}</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+      </nav>
 
-        {/* 2.Menu Bar*/}
-        <div className="menu">
-          <div className="item">
-            <a href="#" className="link">
-              <span>{datas.AboutUs}</span>
-              <svg viewBox="0 0 360 360" xmlSpace="preserve">
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    id="XMLID_225_"
-                    d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
-                  />
-                </g>
-              </svg>
-            </a>
-            <div className="submenu">
-              <div className="submenu-item">
-                <a href="#" className="submenu-link">
-                  {datas.Vision}
-                </a>
-              </div>
-              <div className="submenu-item">
-                <a href="#" className="submenu-link">
-                  {datas.Mission}
-                </a>
-              </div>
-              <div className="submenu-item">
-                <a href="#" className="submenu-link">
-                  {datas.Values}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 3.Menu Bar*/}
-        <div className="menu">
-          <div className="item">
-            <a href="#" className="link">
-              <span>{datas.Contact}</span>
-            </a>
-          </div>
-        </div>
-      </div>
       <div className="flex gap-2 pr-16">
         {/* Using placeholder images for flags */}
         <img
           src={tr}
-          className="w-7 h-7 cursor-pointer"
+          className="w-8 h-8 cursor-pointer"
           id="turkish"
           onClick={changelanguage}
           alt="Turkish"
         />
         <img
           src={ing}
-          className="w-7 h-7 cursor-pointer"
+          className="w-8 h-8 cursor-pointer"
           id="english"
           onClick={changelanguage}
           alt="English"

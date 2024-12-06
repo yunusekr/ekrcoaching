@@ -1,0 +1,188 @@
+.flex-container-mission {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-container-mission {
+    flex-direction: column;
+  }
+}
+
+.flex-title-mission {
+  color: #f1f1f1;
+  position: relative;
+  font-size: 5.5vw;
+  margin: auto;
+  margin-top: 70px;
+  text-align: center;
+  transform: rotate(90deg);
+  top: 15%;
+  transition: all 500ms ease;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-title-mission {
+    transform: rotate(0deg) !important;
+  }
+}
+
+.flex-about-mission {
+  opacity: 0;
+  color: #f1f1f1;
+  position: relative;
+  width: 70%;
+  font-size: 1.7vw;
+  padding: 5%;
+  top: 9%;
+  border: 2px solid #f1f1f1;
+  border-radius: 10px;
+  line-height: 1.1;
+  margin: auto;
+  text-align: left;
+  transform: rotate(0deg);
+  transition: all 500ms ease;
+  max-height: 70vh;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-about-mission {
+    padding: 0;
+    border: 0;
+    max-height: none;
+  }
+}
+
+.flex-slide-mission {
+  flex: 1;
+  cursor: pointer;
+  transition: all 500ms ease;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-slide-mission {
+    overflow: hidden;
+  }
+}
+
+.flex-slide-mission:hover {
+  flex-grow: 3;
+}
+
+.home-mission {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/vision.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+@media screen and (min-width: 768px) {
+  .home-mission {
+    animation: aboutFlexSlide var(--default-seconds) 1;
+    animation-delay: 0s;
+  }
+}
+
+@keyframes aboutFlexSlide {
+  0% {
+    flex-grow: 1;
+  }
+  50% {
+    flex-grow: 3;
+  }
+  100% {
+    flex-grow: 1;
+  }
+}
+
+.flex-title-home-mission {
+  transform: rotate(90deg);
+  top: 15%;
+  animation: aboutFlexSlide var(--default-seconds) 1;
+  animation-delay: 0s;
+}
+
+.flex-about-home-mission {
+  opacity: 0;
+  animation: aboutFlexSlide var(--default-seconds) 1;
+  animation-delay: 0s;
+}
+
+.about-mission {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/mission.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.contact-mission {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/lake-696098_1920.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.work-mission {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/Values.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.spinner-mission {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #222;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+  margin-top: 0;
+  color: #fff;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube1,
+.cube2 {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+  animation-delay: -0.9s;
+}
+
+@keyframes sk-cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

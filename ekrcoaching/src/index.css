@@ -7,3 +7,14 @@
   text-shadow: -8px -4px 4px rgba(0, 0, 0, 0.3);
   font-style: italic;
 }
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
