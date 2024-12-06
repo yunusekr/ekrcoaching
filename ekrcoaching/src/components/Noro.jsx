@@ -2,6 +2,7 @@ import React from "react";
 import "../cssfiles/salesandmarketing.css";
 import blackpaper from "../assets/blackgate.jpg";
 import salesandmarketing from "../assets/Markayonetimi.png";
+import noro from "../assets/noro.jpg";
 function Noro({ datas }) {
   return (
     <div className="w-full h-[693px] flex">
@@ -83,7 +84,7 @@ function Noro({ datas }) {
         style={{
           backgroundImage: `
             linear-gradient(to right, rgba(0, 0, 0, 30), rgba(0, 0, 0, 0)),
-            url(${salesandmarketing})
+            url(${noro})
           `,
           backgroundSize: "cover",
           backgroundPosition: "center",
