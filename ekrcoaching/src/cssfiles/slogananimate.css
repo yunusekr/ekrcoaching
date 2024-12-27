@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
-h1 {
+/* h1 {
   text-transform: uppercase;
 
   background-image: linear-gradient(to right top, black, gray, black, white);
@@ -10,7 +10,7 @@ h1 {
   font-family: "Abril Fatface", cursive;
   font-size: 6vw;
   animation: gradientAnim 5s ease alternate infinite;
-}
+} */
 
 @keyframes gradientAnim {
   to {

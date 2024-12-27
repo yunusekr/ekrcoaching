@@ -1,18 +1,17 @@
 import React from "react";
 import "../cssfiles/salesandmarketing.css";
 import blackpaper from "../assets/blackgate.jpg";
-import salesandmarketing from "../assets/Markayonetimi.png";
-import noro from "../assets/noro.jpg";
-function Noro({ datas }) {
+import tosayno from "../assets/tosayno.jpg";
+function Theartofsayingno({ datas }) {
   return (
     <div className="w-full h-[743px] flex">
       <div
         className="flex flex-col items-center gap-16 h-full w-full slide-in-left text-white"
         style={{
           backgroundImage: `
-            linear-gradient(to left, rgba(0, 0, 0,1), rgba(0, 0, 0, 0)),
-            url(${blackpaper})
-          `,
+              linear-gradient(to left, rgba(0, 0, 0,1), rgba(0, 0, 0, 0)),
+              url(${blackpaper})
+            `,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -26,13 +25,13 @@ function Noro({ datas }) {
             className="text-[1.1vw] w-[70%] italic"
             style={{ fontFamily: "Playfair Display, serif" }}
           >
-            {datas.Neurotext1}
+            {datas.Theartofsayingnotext1}
           </p>
           <p
             className="text-[1.1vw] w-[70%] italic"
             style={{ fontFamily: "Playfair Display, serif" }}
           >
-            {datas.Neurotext2}
+            {datas.Theartofsayingnotext2}
           </p>
         </div>
         <div className="flex flex-col items-center">
@@ -44,37 +43,19 @@ function Noro({ datas }) {
               className="text-[1.1vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext3}
+              {datas.Theartofsayingnotext3}
             </li>
             <li
               className="text-[1.1vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext4}
+              {datas.Theartofsayingnotext4}
             </li>
             <li
               className="text-[1.1vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext5}
-            </li>
-            <li
-              className="text-[1.1vw] italic"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
-              {datas.Neurotext6}
-            </li>
-            <li
-              className="text-[1.1vw] italic"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
-              {datas.Neurotext7}
-            </li>
-            <li
-              className="text-[1.1vw] italic"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
-              {datas.Neurotext8}
+              {datas.Theartofsayingnotext5}
             </li>
           </div>
         </div>
@@ -83,9 +64,9 @@ function Noro({ datas }) {
         className="flex flex-col items-center h-full w-full  slide-in-right"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(0, 0, 0, 30), rgba(0, 0, 0, 0)),
-            url(${noro})
-          `,
+              linear-gradient(to right, rgba(0, 0, 0, 30), rgba(0, 0, 0, 0)),
+              url(${tosayno})
+            `,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -95,4 +76,4 @@ function Noro({ datas }) {
   );
 }
 
-export default Noro;
+export default Theartofsayingno;

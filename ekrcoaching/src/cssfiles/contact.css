@@ -1,0 +1,503 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --primary: white;
+  --primary-dark: white;
+  --primary-blue: gray;
+  --primary-light-blue: white;
+  --secondary-dark: black;
+  --secondary-dark2: white;
+  --transparent-pink: white;
+}
+
+@keyframes rotate {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes successAnime {
+  0% {
+    transform: perspective(5000px) rotateX(0deg) rotateZ(0deg);
+  }
+  20% {
+    transform: perspective(5000px) rotateX(80deg) rotateZ(90deg);
+  }
+  80% {
+    transform: perspective(5000px) rotateX(80deg) rotateZ(90deg);
+  }
+  100% {
+    transform: perspective(5000px) rotateX(0deg) rotateZ(0deg);
+  }
+}
+
+@keyframes mailOut {
+  0% {
+    transform: rotateX(0deg) rotateZ(0deg) translateZ(-2px) translateY(0);
+  }
+  20% {
+    transform: rotateX(0deg) rotateZ(0deg) translateZ(-2px) translateY(0);
+  }
+  40% {
+    transform: rotateX(0deg) rotateZ(0deg) translateZ(-2px) translateY(-300px);
+  }
+
+  60% {
+    transform: rotateX(0deg) rotateZ(0deg) translateZ(-2px) translateY(-400px);
+  }
+  70% {
+    transform: rotateX(0deg) rotateZ(-75deg) translateZ(-2px)
+      translateY(-2000px);
+  }
+  80% {
+    transform: rotateX(0deg) rotateZ(-135deg) translateZ(-2px)
+      translateY(-5000px);
+  }
+  100% {
+    transform: rotateX(0deg) rotateZ(-135deg) translateZ(-2px)
+      translateY(-5000px);
+  }
+}
+
+@media (max-width: 500px) {
+  @keyframes successAnime {
+    0% {
+      transform: perspective(5000px) rotateX(0deg) rotateZ(0deg)
+        scale3d(1, 1, 1);
+    }
+    20% {
+      transform: perspective(5000px) rotateX(80deg) rotateZ(00deg)
+        scale3d(0.8, 0.8, 0.8);
+    }
+    80% {
+      transform: perspective(5000px) rotateX(80deg) rotateZ(00deg)
+        scale3d(0.8, 0.8, 0.8);
+    }
+    100% {
+      transform: perspective(5000px) rotateX(0deg) rotateZ(0deg)
+        scale3d(1, 1, 1);
+    }
+  }
+}
+
+.super-container {
+  height: 893px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.containerr {
+  display: flex;
+  gap: 0rem;
+  --gradient-angle: 0deg;
+  border-radius: 20px;
+  border: 1px solid var(--primary-blue);
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://eclipsesol.com/wp-content/uploads/2023/09/contact-us-scaled-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  box-shadow: 0 0 20px var(--secondary-dark);
+  width: 100%;
+  transition: 0.15s all;
+  transform-style: preserve-3d;
+  transform: perspective(5000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+
+  &.sent {
+    animation: successAnime 4s linear forwards;
+    @media only screen and (max-width: 500px) {
+      animation: successAnime 4s linear forwards;
+    }
+  }
+
+  &.sent .hidden,
+  &.sent .hidden:after {
+    animation: show 4s linear forwards;
+  }
+
+  & .mail {
+    background: linear-gradient(
+      to bottom,
+      var(--primary-light-blue),
+      var(--primary-blue)
+    );
+    position: absolute;
+    inset: 0;
+    font-size: 30px;
+    color: black;
+    border-radius: inherit;
+    transform: rotateX(0deg) rotateZ(0deg) translateZ(-5px) translateY(0);
+  }
+  & .mail:after,
+  & .mail:before {
+    content: "";
+    position: absolute;
+    border-top: 20px solid var(--primary-blue);
+    border-radius: 10px;
+    width: 54%;
+    top: 5%;
+    @media only screen and (max-width: 500px) {
+      width: 59%;
+    }
+  }
+  & .mail:before {
+    left: 5%;
+    transform-origin: top left;
+    transform: rotate(35deg);
+  }
+  & .mail:after {
+    right: 5%;
+    transform-origin: top right;
+    transform: rotate(-35deg);
+  }
+  &.sent .mail {
+    animation: mailOut 4s linear;
+  }
+
+  & .hidden {
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    color: black;
+    font-weight: bolder;
+    white-space: nowrap;
+    transform: rotateX(270deg) rotateY(90deg) translateZ(15rem) translateY(0)
+      translateX(-7.5rem);
+    opacity: 0;
+    @media screen and (max-width: 500px) {
+      font-size: 25px;
+      bottom: 0;
+      left: 50%;
+      right: unset;
+      transform: rotateX(-90deg) translateZ(5rem) translateY(0) translateX(-50%);
+    }
+  }
+  & .hidden:after {
+    content: "Mail Gönderildi ✅";
+    position: absolute;
+    left: 50%;
+    top: -150%;
+    font-size: 30px;
+    color: black;
+    opacity: 0;
+    transform: translateX(-50%);
+    @media screen and (max-width: 500px) {
+      font-size: 25px;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    border-radius: inherit;
+    position: absolute;
+    inset: -0.7rem;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      black,
+      gray,
+      white,
+      black,
+      gray,
+      white,
+      black
+    );
+    animation: rotate 10s linear infinite;
+  }
+  &:after {
+    transform: rotateX(0deg) rotateZ(0deg) translateZ(-50px) translateY(0);
+  }
+  &:before {
+    transform: translateZ(-49px);
+    filter: blur(15px);
+  }
+  @media screen and (max-width: 500px) {
+    border-radius: 0;
+    box-shadow: none;
+    width: 100vw;
+    border: none;
+    border-top: 1px solid var(--primary-blue);
+    transform: none;
+
+    &:before,
+    &:after {
+      inset: 0;
+      top: -0.2rem;
+      bottom: -0.2rem;
+    }
+    &:before {
+      filter: blur(10px);
+    }
+  }
+}
+
+.top-heading {
+  & h1 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  @media screen and (max-width: 500px) {
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 0 2rem 1rem;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+}
+
+.contact-form {
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  & label {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: white;
+  }
+  & input:-webkit-autofill,
+  & input:-webkit-autofill:hover,
+  & input:-webkit-autofill:focus,
+  & input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    transition-delay: 9999s;
+  }
+  & input {
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    outline: none;
+    border: none;
+    border: 2px solid var(--primary-blue);
+    padding: 5px 10px;
+    background: transparent;
+    position: relative;
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    font-weight: 100;
+  }
+  & textarea {
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    outline: none;
+    border: none;
+    border: 2px solid var(--primary-blue);
+    padding: 10px 10px;
+    background: transparent;
+    position: relative;
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    font-weight: 100;
+    resize: none;
+    min-height: 300px;
+
+    ::selection {
+      color: white;
+      background: var(--primary-blue);
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+  }
+  @media screen and (max-width: 500px) {
+    padding: 0 2rem;
+
+    & label {
+      font-size: 0.9rem;
+      font-weight: 900;
+    }
+    & input {
+      font-size: 15px;
+    }
+    & textarea {
+      font-weight: 400;
+    }
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0.5rem 0 0 0;
+  &:first-child {
+    padding-right: 1rem;
+    @media screen and (max-width: 500px) {
+      padding-right: 0;
+    }
+  }
+}
+
+.link {
+  position: absolute;
+  z-index: 10000;
+  bottom: 10px;
+  left: 50%;
+  translate: -50% 0;
+  color: white;
+}
+
+.contact-info {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.card {
+  background: #2f3542;
+  border-radius: 1rem;
+  padding: 0 20px;
+  margin: 0 10px;
+  width: calc(33% - 20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card-icon {
+  font-size: 28px;
+  background: black;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.card:hover .card-icon {
+  background: none;
+  color: white;
+  transform: scale(1.6);
+}
+
+.card p {
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.card:hover p {
+  max-height: 40px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-info {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+}
+
+button {
+  font-family: inherit;
+  font-size: 20px;
+  background: gray;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}

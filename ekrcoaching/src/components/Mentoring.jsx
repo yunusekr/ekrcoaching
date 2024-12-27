@@ -1,9 +1,8 @@
 import React from "react";
 import "../cssfiles/salesandmarketing.css";
 import blackpaper from "../assets/blackgate.jpg";
-import salesandmarketing from "../assets/Markayonetimi.png";
-import noro from "../assets/noro.jpg";
-function Noro({ datas }) {
+import mentor from "../assets/mentor.jpeg";
+function Mentoring({ datas }) {
   return (
     <div className="w-full h-[743px] flex">
       <div
@@ -18,73 +17,74 @@ function Noro({ datas }) {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="flex flex-col items-center mt-20">
-          <p className="text-[1.6vw] font-[Lora]">
-            {datas.Salesandmarketingtext1}
-          </p>
+        <div className="flex flex-col items-center mt-5">
+          <p className="text-[1.9rem] font-[Lora]">{datas.Mentoringtext1}</p>
           <p
-            className="text-[1.1vw] w-[70%] italic"
+            className="text-[1.4rem] w-[70%] italic"
             style={{ fontFamily: "Playfair Display, serif" }}
           >
-            {datas.Neurotext1}
-          </p>
-          <p
-            className="text-[1.1vw] w-[70%] italic"
-            style={{ fontFamily: "Playfair Display, serif" }}
-          >
-            {datas.Neurotext2}
+            {datas.Mentoringtext2}
           </p>
         </div>
         <div className="flex flex-col items-center">
-          <p className="text-[1.6vw] font-[Lora]">
-            {datas.Salesandmarketingtext3}
+          <p
+            className="text-[1.4rem] w-[70%] italic"
+            style={{ fontFamily: "Playfair Display, serif" }}
+          >
+            {datas.Mentoringtext3}
           </p>
           <div>
             <li
-              className="text-[1.1vw] italic"
+              className="text-[1.4rem] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext3}
+              {datas.Mentoringtext4}
             </li>
             <li
-              className="text-[1.1vw] italic"
+              className="text-[1.4rem] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext4}
+              {datas.Mentoringtext5}
             </li>
             <li
-              className="text-[1.1vw] italic"
+              className="text-[1.4rem] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext5}
+              {datas.Mentoringtext6}
             </li>
             <li
-              className="text-[1.1vw] italic"
+              className="text-[1.4rem] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext6}
+              {datas.Mentoringtext7}
             </li>
             <li
-              className="text-[1.1vw] italic"
+              className="text-[1.4rem] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext7}
-            </li>
-            <li
-              className="text-[1.1vw] italic"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
-              {datas.Neurotext8}
+              {datas.Mentoringtext8}
             </li>
           </div>
+          <p
+            className="text-[1.4rem] w-[70%] italic"
+            style={{ fontFamily: "Playfair Display, serif" }}
+          >
+            {datas.Mentoringtext9}
+          </p>
+          <p
+            className="text-[1.4rem] w-[70%] italic"
+            style={{ fontFamily: "Playfair Display, serif" }}
+          >
+            {datas.Mentoringtext10}
+          </p>
         </div>
       </div>
       <div
-        className="flex flex-col items-center h-full w-full  slide-in-right"
+        className="flex flex-col items-center h-full w-full slide-in-right"
         style={{
           backgroundImage: `
             linear-gradient(to right, rgba(0, 0, 0, 30), rgba(0, 0, 0, 0)),
-            url(${noro})
+            url(${mentor})
           `,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -95,4 +95,4 @@ function Noro({ datas }) {
   );
 }
 
-export default Noro;
+export default Mentoring;

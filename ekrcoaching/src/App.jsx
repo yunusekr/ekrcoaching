@@ -13,6 +13,15 @@ import AboutUs from "./components/AboutUs";
 import Salesandmarketing from "./components/Salesandmarketing";
 import Noro from "./components/Noro";
 import TimeManagement from "./components/TimeManagement";
+import Leadership from "./components/Leadership";
+import CommunucationSkills from "./components/CommunucationSkills";
+import Theartofsayingno from "./components/Theartofsayingno";
+import Costmanagement from "./components/Costmanagement";
+import Goalsetting from "./components/Goalsetting";
+import Coaching from "./components/Coaching";
+import Mentoring from "./components/Mentoring";
+import SalesAndMarketingConsultancy from "./components/SalesAndMarketingConsultancy";
+import Exportconsultancy from "./components/Exportconsultancy";
 
 function App() {
   const [datas, Setdatas] = useState({});
@@ -45,12 +54,41 @@ function App() {
         <Route exact path="/timemanagement">
           <TimeManagement datas={datas} />
         </Route>
+        <Route exact path="/communucationskills">
+          <CommunucationSkills datas={datas} />
+        </Route>
+        <Route exact path="/leadership">
+          <Leadership datas={datas} />
+        </Route>
+        <Route exact path="/theartofsayingno">
+          <Theartofsayingno datas={datas} />
+        </Route>
+        <Route exact path="/costmanagement">
+          <Costmanagement datas={datas} />
+        </Route>
+        <Route exact path="/goalsetting">
+          <Goalsetting datas={datas} />
+        </Route>
+        <Route exact path="/coaching">
+          <Coaching datas={datas} />
+        </Route>
+        <Route exact path="/mentoring">
+          <Mentoring datas={datas} />
+        </Route>
+        <Route exact path="/salesandmarketingconsultancy">
+          <SalesAndMarketingConsultancy datas={datas} />
+        </Route>
+        <Route exact path="/exportconsultancy">
+          <Exportconsultancy datas={datas} />
+        </Route>
         <Route exact path="/contact">
           <Contact datas={datas} />
         </Route>
       </Switch>
 
-      {location.pathname !== "/aboutus" && <Footer datas={datas} />}
+      {location.pathname !== "/aboutus" && location.pathname !== "/contact" && (
+        <Footer datas={datas} />
+      )}
     </div>
   );
 }

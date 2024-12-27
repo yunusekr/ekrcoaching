@@ -86,16 +86,20 @@ function Header({ datas, setdata }) {
                           <a href="/timemanagement">{datas.TimeManagement}</a>
                         </li>
                         <li>
-                          <a href="#">{datas.Leadership}</a>
+                          <a href="/leadership">{datas.Leadership}</a>
                         </li>
                         <li>
-                          <a href="#">{datas.CommunicationSkills}</a>
+                          <a href="/communucationskills">
+                            {datas.CommunicationSkills}
+                          </a>
                         </li>
                         <li>
-                          <a href="#">{datas.Theartofsayingno}</a>
+                          <a href="/theartofsayingno">
+                            {datas.Theartofsayingno}
+                          </a>
                         </li>
                         <li>
-                          <a href="#">{datas.Costmanagement}</a>
+                          <a href="/costmanagement">{datas.Costmanagement}</a>
                         </li>
                       </ul>
                     </li>
@@ -106,7 +110,9 @@ function Header({ datas, setdata }) {
                       </a>
                       <ul className="sub_menu">
                         <li className="has_dropdown">
-                          <a href="#">{datas.GoalSettingModelling} </a>
+                          <a href="/goalsetting">
+                            {datas.GoalSettingModelling}{" "}
+                          </a>
                         </li>
                       </ul>
                     </li>
@@ -119,10 +125,10 @@ function Header({ datas, setdata }) {
 
                   <ul className="sub_menu">
                     <li className="has_dropdown">
-                      <a href="#">{datas.Coaching}</a>
+                      <a href="/coaching">{datas.Coaching}</a>
                     </li>
                     <li className="has_dropdown">
-                      <a href="#">{datas.Mentoring}</a>
+                      <a href="/mentoring">{datas.Mentoring}</a>
                     </li>
                     <li className="has_dropdown">
                       <a href="#">
@@ -131,10 +137,14 @@ function Header({ datas, setdata }) {
                       </a>
                       <ul className="sub_menu">
                         <li>
-                          <a href="#">{datas.Salesandmarketingconsultancy}</a>
+                          <a href="/salesandmarketingconsultancy">
+                            {datas.Salesandmarketingconsultancy}
+                          </a>
                         </li>
                         <li>
-                          <a href="#">{datas.Exportconsultancy}</a>
+                          <a href="/exportconsultancy">
+                            {datas.Exportconsultancy}
+                          </a>
                         </li>
                       </ul>
                     </li>

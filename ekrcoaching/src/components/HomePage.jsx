@@ -2,7 +2,14 @@ import React from "react";
 import "../cssfiles/slogananimate.css";
 import WhyUs from "./WhyUs";
 import homePagePicture from "../assets/homepagepicture.jpg";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 function HomePage({ datas }) {
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push("/contact");
+  };
+
   return (
     <div className="w-full flex flex-col justify-center items-center relative">
       <div className="container-text">
@@ -42,7 +49,7 @@ function HomePage({ datas }) {
           </p>
           <br />
           <p className="font-bold font-[Lora]">{datas.Text4}</p>
-          <button type="button" className="btn mt-7">
+          <button type="button" className="btn mt-7" onClick={handleClick}>
             <strong>{datas.Buttontext}</strong>
             <div id="container-stars">
               <div id="stars"></div>

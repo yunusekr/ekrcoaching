@@ -1,9 +1,8 @@
 import React from "react";
 import "../cssfiles/salesandmarketing.css";
 import blackpaper from "../assets/blackgate.jpg";
-import salesandmarketing from "../assets/Markayonetimi.png";
-import noro from "../assets/noro.jpg";
-function Noro({ datas }) {
+import leadership from "../assets/Leadership.jpg";
+function Leadership({ datas }) {
   return (
     <div className="w-full h-[743px] flex">
       <div
@@ -18,7 +17,7 @@ function Noro({ datas }) {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="flex flex-col items-center mt-20">
+        <div className="flex flex-col items-center mt-6">
           <p className="text-[1.6vw] font-[Lora]">
             {datas.Salesandmarketingtext1}
           </p>
@@ -26,55 +25,61 @@ function Noro({ datas }) {
             className="text-[1.1vw] w-[70%] italic"
             style={{ fontFamily: "Playfair Display, serif" }}
           >
-            {datas.Neurotext1}
+            {datas.Leadershiptext1}
           </p>
           <p
             className="text-[1.1vw] w-[70%] italic"
             style={{ fontFamily: "Playfair Display, serif" }}
           >
-            {datas.Neurotext2}
+            {datas.Leadershiptext2}
           </p>
         </div>
         <div className="flex flex-col items-center">
           <p className="text-[1.6vw] font-[Lora]">
             {datas.Salesandmarketingtext3}
           </p>
+          <p
+            className="text-[1.1vw] w-[70%] italic"
+            style={{ fontFamily: "Playfair Display, serif" }}
+          >
+            {datas.Leadershiptext3}
+          </p>
           <div>
             <li
               className="text-[1.1vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext3}
+              {datas.Leadershiptext4}
             </li>
             <li
               className="text-[1.1vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext4}
+              {datas.Leadershiptext5}
             </li>
             <li
               className="text-[1.1vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext5}
+              {datas.Leadershiptext6}
             </li>
             <li
               className="text-[1.1vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext6}
+              {datas.Leadershiptext7}
             </li>
             <li
               className="text-[1.1vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext7}
+              {datas.Leadershiptext8}
             </li>
             <li
               className="text-[1.1vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              {datas.Neurotext8}
+              {datas.Leadershiptext9}
             </li>
           </div>
         </div>
@@ -84,7 +89,7 @@ function Noro({ datas }) {
         style={{
           backgroundImage: `
             linear-gradient(to right, rgba(0, 0, 0, 30), rgba(0, 0, 0, 0)),
-            url(${noro})
+            url(${leadership})
           `,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -95,4 +100,4 @@ function Noro({ datas }) {
   );
 }
 
-export default Noro;
+export default Leadership;
