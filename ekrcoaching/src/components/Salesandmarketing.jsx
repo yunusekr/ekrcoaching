@@ -5,9 +5,9 @@ import salesandmarketing from "../assets/Markayonetimi.png";
 
 function Salesandmarketing({ datas }) {
   return (
-    <div className="w-full h-[743px] flex">
+    <div className="w-full h-[100vh] mt-[-60px] flex">
       <div
-        className="flex flex-col items-center gap-16 h-full w-full slide-in-left text-white"
+        className="flex flex-col items-center gap-10 w-[120%] slide-in-left text-white"
         style={{
           backgroundImage: `
         linear-gradient(to left, rgba(0, 0, 0,1), rgba(0, 0, 0, 0)),
@@ -19,53 +19,56 @@ function Salesandmarketing({ datas }) {
         }}
       >
         <div className="flex flex-col items-center mt-20">
-          <p className="text-[1.6vw] font-[Lora]">
+          <p className="text-[2.5vw] font-[Lora]">
             {datas.Salesandmarketingtext1}
           </p>
           <p
-            className="text-[1.1vw] w-[70%] italic"
-            style={{ fontFamily: "Playfair Display, serif" }}
+            className="text-[1.5vw] w-[90%] italic"
+            style={{
+              fontFamily: "Playfair Display, serif",
+              textIndent: "3vw",
+            }}
           >
             {datas.Salesandmarketingtext2}
           </p>
         </div>
         <div className="flex flex-col items-center">
-          <p className="text-[1.6vw] font-[Lora]">
+          <p className="text-[2.5vw] font-[Lora]">
             {datas.Salesandmarketingtext3}
           </p>
           <p
-            className="text-[1.1vw] w-[70%] italic"
-            style={{ fontFamily: "Playfair Display, serif" }}
+            className="text-[1.5vw] w-[90%] italic"
+            style={{ fontFamily: "Playfair Display, serif", textIndent: "3vw" }}
           >
             {datas.Salesandmarketingtext4}
           </p>
           <div>
             <li
-              className="text-[1.1vw] italic"
+              className="text-[1.5vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               {datas.Salesandmarketingtext5}
             </li>
             <li
-              className="text-[1.1vw] italic"
+              className="text-[1.5vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               {datas.Salesandmarketingtext6}
             </li>
             <li
-              className="text-[1.1vw] italic"
+              className="text-[1.5vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               {datas.Salesandmarketingtext7}
             </li>
             <li
-              className="text-[1.1vw] italic"
+              className="text-[1.5vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               {datas.Salesandmarketingtext8}
             </li>
             <li
-              className="text-[1.1vw] italic"
+              className="text-[1.5vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               {datas.Salesandmarketingtext9}

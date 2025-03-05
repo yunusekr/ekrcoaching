@@ -163,10 +163,10 @@ function Contact({ datas }) {
           <div className="flex flex-col items-center">
             <i class="fa-solid fa-envelope text-blue-300 text-[3.5vw]"></i>
             <p
-              className="text-[1.5rem]"
+              className="text-[1.3rem]"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              kurumsal@ekr.com
+              kurumsal@ekracademy.com
             </p>
           </div>
           <div className="flex flex-col items-center">

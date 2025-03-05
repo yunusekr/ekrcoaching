@@ -12,9 +12,7 @@ function Footer({ datas }) {
         // background: "linear-gradient(to right, white 30%, black 170%)",
         zIndex: 1000,
       }}
-    >
-      asdas
-    </div>
+    ></div>
   );
 }
 

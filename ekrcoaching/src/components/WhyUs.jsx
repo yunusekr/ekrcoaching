@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../cssfiles/whyus.css";
 import hi from "../assets/hi.jpg";
-import achievement from "../assets/basarı.jpg";
+import achievement from "../assets/basari.jpg";
 import personal from "../assets/personal.jpg";
 function WhyUs({ datas }) {
   useEffect(() => {

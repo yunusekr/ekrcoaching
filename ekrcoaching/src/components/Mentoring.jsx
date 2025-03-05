@@ -4,9 +4,9 @@ import blackpaper from "../assets/blackgate.jpg";
 import mentor from "../assets/mentor.jpeg";
 function Mentoring({ datas }) {
   return (
-    <div className="w-full h-[743px] flex">
+    <div className="w-full h-[100vh] mt-[-60px] flex">
       <div
-        className="flex flex-col items-center gap-16 h-full w-full slide-in-left text-white"
+        className="flex flex-col items-center gap-11 h-full w-[120%] slide-in-left text-white justify-center"
         style={{
           backgroundImage: `
             linear-gradient(to left, rgba(0, 0, 0,1), rgba(0, 0, 0, 0)),
@@ -18,66 +18,66 @@ function Mentoring({ datas }) {
         }}
       >
         <div className="flex flex-col items-center mt-5">
-          <p className="text-[1.9rem] font-[Lora]">{datas.Mentoringtext1}</p>
+          <p className="text-[2vw] font-[Lora]">{datas.Mentoringtext1}</p>
           <p
-            className="text-[1.4rem] w-[70%] italic"
-            style={{ fontFamily: "Playfair Display, serif" }}
+            className="text-[1.4vw] w-[96%] italic"
+            style={{ fontFamily: "Playfair Display, serif", textIndent: "3vw" }}
           >
             {datas.Mentoringtext2}
           </p>
         </div>
         <div className="flex flex-col items-center">
           <p
-            className="text-[1.4rem] w-[70%] italic"
-            style={{ fontFamily: "Playfair Display, serif" }}
+            className="text-[1.4vw] w-[95%] italic"
+            style={{ fontFamily: "Playfair Display, serif", textIndent: "3vw" }}
           >
             {datas.Mentoringtext3}
           </p>
           <div>
             <li
-              className="text-[1.4rem] italic"
+              className="text-[1.4vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               {datas.Mentoringtext4}
             </li>
             <li
-              className="text-[1.4rem] italic"
+              className="text-[1.4vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               {datas.Mentoringtext5}
             </li>
             <li
-              className="text-[1.4rem] italic"
+              className="text-[1.4vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               {datas.Mentoringtext6}
             </li>
             <li
-              className="text-[1.4rem] italic"
+              className="text-[1.4vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               {datas.Mentoringtext7}
             </li>
             <li
-              className="text-[1.4rem] italic"
+              className="text-[1.4vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               {datas.Mentoringtext8}
             </li>
           </div>
-          <p
-            className="text-[1.4rem] w-[70%] italic"
-            style={{ fontFamily: "Playfair Display, serif" }}
-          >
-            {datas.Mentoringtext9}
-          </p>
-          <p
-            className="text-[1.4rem] w-[70%] italic"
-            style={{ fontFamily: "Playfair Display, serif" }}
-          >
-            {datas.Mentoringtext10}
-          </p>
         </div>
+        <p
+          className="text-[1.4vw] w-[90%] italic"
+          style={{ fontFamily: "Playfair Display, serif", textIndent: "3vw" }}
+        >
+          {datas.Mentoringtext9}
+        </p>
+        <p
+          className="text-[1.4vw] w-[90%] italic"
+          style={{ fontFamily: "Playfair Display, serif", textIndent: "3vw" }}
+        >
+          {datas.Mentoringtext10}
+        </p>
       </div>
       <div
         className="flex flex-col items-center h-full w-full slide-in-right"

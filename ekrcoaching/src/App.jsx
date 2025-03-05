@@ -1,9 +1,6 @@
-import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
-import veriler from "./veriler";
-
+import { useEffect, useState } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import HomePage from "./components/HomePage";
@@ -22,10 +19,12 @@ import Coaching from "./components/Coaching";
 import Mentoring from "./components/Mentoring";
 import SalesAndMarketingConsultancy from "./components/SalesAndMarketingConsultancy";
 import Exportconsultancy from "./components/Exportconsultancy";
+import veriler from "./veriler";
 
 function App() {
   const [datas, Setdatas] = useState({});
-  const location = useLocation(); // useLocation hook'u ile geçerli sayfa bilgisi alındı
+  const location = useLocation();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     if (localStorage.getItem("language") == null) {
@@ -33,11 +32,31 @@ function App() {
     } else {
       Setdatas(veriler[localStorage.getItem("language")]);
     }
+
+    // Ekran boyutu dinle
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  if (isMobile) {
+    // Ekran mobil ise, sadece bu yazıyı göster
+    return (
+      <div className="w-full h-screen flex justify-center items-center bg-yellow-200 text-black font-bold text-xl">
+        Site mobil için hazırlanıyor...
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col">
+      {/* Sadece masaüstü/tablet için Header */}
       <Header datas={datas} setdata={Setdatas} />
+
       <Switch>
         <Route exact path="/">
           <HomePage datas={datas} />
@@ -86,9 +105,8 @@ function App() {
         </Route>
       </Switch>
 
-      {location.pathname !== "/aboutus" && location.pathname !== "/contact" && (
-        <Footer datas={datas} />
-      )}
+      {/* Sadece anasayfada ve masaüstünde Footer */}
+      {location.pathname === "/" && <Footer datas={datas} />}
     </div>
   );
 }
