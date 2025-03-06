@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import "../cssfiles/contact.css";
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 import phone from "../assets/phone-Photoroom.png";
+
 function Contact({ datas }) {
   const {
     register,
@@ -10,11 +12,38 @@ function Contact({ datas }) {
     reset,
   } = useForm();
 
+  const sendEmail = (data) => {
+    const templateParams = {
+      from_name: data.name,
+      from_email: data.email,
+      phone: data.phone,
+      message: data.message,
+    };
+
+    emailjs
+      .send(
+        "service_5gzvuth", // EmailJS Service ID
+        "template_7spvwk5", // EmailJS Template ID
+        templateParams,
+        "aCDj-FKcct0qfo1by" // EmailJS Public Key
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+  };
+
   const onSubmit = (data, event) => {
     event.preventDefault();
 
     if (Object.keys(errors).length === 0) {
       console.log(data);
+      sendEmail(data);
+
       const contactElement = document.querySelector(".contact");
       if (contactElement) {
         contactElement.classList.add("sent");
@@ -161,18 +190,18 @@ function Contact({ datas }) {
           }}
         >
           <div className="flex flex-col items-center">
-            <i class="fa-solid fa-envelope text-blue-300 text-[3.5vw]"></i>
+            <i className="fa-solid fa-envelope text-blue-300 text-[3.5vw]"></i>
             <p
-              className="text-[1.3rem]"
+              className="text-[1vw]"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               kurumsal@ekracademy.com
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <i class="fa-solid fa-phone text-green-300 text-[3.5vw]"></i>
+            <i className="fa-solid fa-phone text-green-300 text-[3.5vw]"></i>
             <p
-              className="text-[1.5rem]"
+              className="text-[1vw]"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               0533 325 10 89 <br />
@@ -180,9 +209,9 @@ function Contact({ datas }) {
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <i class="fa-solid fa-location-dot text-red-300 text-[3.5vw]"></i>
+            <i className="fa-solid fa-location-dot text-red-300 text-[3.5vw]"></i>
             <p
-              className="text-[1.5rem]"
+              className="text-[1vw]"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Ulukent-İzmir 35620
