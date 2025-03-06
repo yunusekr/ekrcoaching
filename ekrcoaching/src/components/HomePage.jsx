@@ -13,12 +13,10 @@ function HomePage({ datas }) {
 
   return (
     <div className="w-full flex flex-col justify-center items-center relative">
-      {/* Mobilde Görünecek - Tüm ekranı kaplayan uyarı */}
       <div className="w-full h-screen flex justify-center items-center bg-yellow-200 text-black font-bold text-xl md:hidden">
         Site mobil için hazırlanıyor...
       </div>
 
-      {/* Normal İçerik - Sadece md ve üstü ekranlarda görünür */}
       <div className="hidden md:flex flex-col justify-center items-center w-full">
         <div className="container-text">
           {/* <h1>{datas.Wearelisteningtoyou}</h1> */}
