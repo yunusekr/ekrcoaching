@@ -4,7 +4,7 @@ import blackpaper from "../assets/blackgate.jpg";
 import salesandmarketingconsultancy from "../assets/salesandmarketingconsultancy.jpg";
 function SalesAndMarketingConsultancy({ datas }) {
   return (
-    <div className="w-full h-[100vh] mt-[-60px] flex">
+    <div className="w-full h-[100vh] flex">
       <div
         className="flex flex-col items-center gap-9 h-full w-[120%] slide-in-left text-white justify-center"
         style={{

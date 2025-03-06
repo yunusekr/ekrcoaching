@@ -5,7 +5,7 @@ import salesandmarketing from "../assets/Markayonetimi.png";
 import noro from "../assets/noro.jpg";
 function Noro({ datas }) {
   return (
-    <div className="w-full h-[100vh] mt-[-60px] flex">
+    <div className="w-full h-[100vh] flex">
       <div
         className="flex flex-col items-center gap-16 h-full w-[120%] slide-in-left text-white"
         style={{
