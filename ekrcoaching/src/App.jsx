@@ -106,7 +106,9 @@ function App() {
       </Switch>
 
       {/* Sadece anasayfada ve masaüstünde Footer */}
-      {location.pathname === "/" && <Footer datas={datas} />}
+      {!(
+        location.pathname === "/contact" || location.pathname === "/aboutus"
+      ) && <Footer datas={datas} />}
     </div>
   );
 }
