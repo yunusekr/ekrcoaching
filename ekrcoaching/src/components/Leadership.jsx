@@ -17,7 +17,7 @@ function Leadership({ datas }) {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="flex flex-col items-center mt-20">
+        <div className="flex flex-col items-center mt-7">
           <p className="text-[2.4vw] font-[Lora]">
             {datas.Salesandmarketingtext1}
           </p>
