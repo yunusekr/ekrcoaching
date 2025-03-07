@@ -7,7 +7,7 @@ function Noro({ datas }) {
   return (
     <div className="w-full h-[100vh] flex">
       <div
-        className="flex flex-col items-center gap-16 h-full w-[120%] slide-in-left text-white"
+        className="flex flex-col items-center gap-8 h-full w-[120%] slide-in-left text-white"
         style={{
           backgroundImage: `
             linear-gradient(to left, rgba(0, 0, 0,1), rgba(0, 0, 0, 0)),
