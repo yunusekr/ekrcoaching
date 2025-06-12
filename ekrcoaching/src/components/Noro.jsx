@@ -111,7 +111,7 @@ function Noro({ datas }) {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-70 h-[100vh]"></div>
         <div className="flex flex-col items-center mt-20 slide-in-left">
           <p className="text-[10vw] font-[Lora]">
             {datas.Salesandmarketingtext1}

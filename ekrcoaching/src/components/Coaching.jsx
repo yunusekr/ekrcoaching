@@ -110,7 +110,7 @@ function Coaching({ datas }) {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-65"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-65 h-[100vh]"></div>
         <div className="flex flex-col items-center mt-40 slide-in-left">
           <p className="text-[8.5vw] font-[Lora]">{datas.Coachingtext1}</p>
           <p

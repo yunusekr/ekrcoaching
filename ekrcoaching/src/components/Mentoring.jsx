@@ -111,7 +111,7 @@ function Mentoring({ datas }) {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-65"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-65 h-[100vh]"></div>
         <div className="flex flex-col items-center mt-5 slide-in-left text-center">
           <p className="text-[10vw] font-[Lora]">{datas.Mentoringtext1}</p>
           <p
