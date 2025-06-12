@@ -17,7 +17,7 @@ function Header({ datas, setdata }) {
       localStorage.setItem("language", "english");
     }
   };
-
+  // deneme
   return (
     <div
       className="w-full flex justify-center gap-[7rem] items-center z-[100] relative diagonal-div sticky top-0 bg-white fixed"
