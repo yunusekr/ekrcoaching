@@ -42,7 +42,7 @@ function Contact({ datas }) {
 
     if (Object.keys(errors).length === 0) {
       console.log(data);
-      sendEmail(data);
+      // sendEmail(data);
 
       const contactElement = document.querySelector(".contact");
       if (contactElement) {
@@ -56,13 +56,13 @@ function Contact({ datas }) {
   };
 
   return (
-    <div className="super-container ">
+    <div className="super-container">
       <div className="containerr contact">
         <span className="mail"></span>
 
         <form className="contact-form " onSubmit={handleSubmit(onSubmit)}>
           <div className="top-heading">
-            <p className="text-white text-[60px] text-center font-[Lora]">
+            <p className="text-white md:text-[60px] text-[35px]  text-center font-[Lora]">
               {datas.Contactcontactus}
             </p>
           </div>
@@ -181,9 +181,38 @@ function Contact({ datas }) {
             </button>
           </div>
         </form>
-
+        <div className="ml-10 flex flex-col justify-center items-center gap-7">
+          <div className="flex gap-5 w-full">
+            <i className="fa-solid fa-envelope text-blue-300 text-[10vw]"></i>
+            <p
+              className="text-[5vw] text-white"
+              style={{ fontFamily: "Playfair Display, serif" }}
+            >
+              kurumsal@ekracademy.com
+            </p>
+          </div>
+          <div className="flex gap-5 w-full">
+            <i className="fa-solid fa-phone text-green-300 text-[10vw]"></i>
+            <p
+              className="text-[5vw] text-white"
+              style={{ fontFamily: "Playfair Display, serif" }}
+            >
+              0533 325 10 89 <br />
+              0533 899 10 89
+            </p>
+          </div>
+          <div className="flex gap-5 w-full">
+            <i className="fa-solid fa-location-dot text-red-300 text-[10vw]"></i>
+            <p
+              className="text-[5vw] text-white"
+              style={{ fontFamily: "Playfair Display, serif" }}
+            >
+              Ulukent-İzmir 35620
+            </p>
+          </div>
+        </div>
         <div
-          className="h-[80vh] w-[600px] bg-center bg-no-repeat flex flex-col justify-center items-center text-white gap-20"
+          className="h-[80vh] w-full bg-center bg-no-repeat lg:flex-col justify-center items-center text-white gap-20 hidden"
           style={{
             backgroundImage: `url(${phone})`,
             backgroundSize: "contain",
