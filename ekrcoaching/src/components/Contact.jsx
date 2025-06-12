@@ -181,7 +181,7 @@ function Contact({ datas }) {
             </button>
           </div>
         </form>
-        <div className="ml-10 flex flex-col justify-center items-center gap-7">
+        <div className="ml-10 md:flex flex-col justify-center items-center gap-7 hidden">
           <div className="flex gap-5 w-full">
             <i className="fa-solid fa-envelope text-blue-300 text-[10vw]"></i>
             <p
