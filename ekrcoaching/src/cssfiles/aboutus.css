@@ -30,6 +30,10 @@
   .flex-title-mission {
     transform: rotate(0deg) !important;
   }
+
+  .flex-title-mission {
+    font-size: 12vw;
+  }
 }
 
 .flex-about-mission {
@@ -52,9 +56,12 @@
 
 @media screen and (max-width: 768px) {
   .flex-about-mission {
-    padding: 0;
+    font-size: 4vw;
+    padding: 3%;
     border: 0;
     max-height: none;
+    border: 2px solid #f1f1f1;
+    border-radius: 3px;
   }
 }
 

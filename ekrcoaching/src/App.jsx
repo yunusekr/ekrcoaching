@@ -43,14 +43,14 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  if (isMobile) {
-    // Ekran mobil ise, sadece bu yazıyı göster
-    return (
-      <div className="w-full h-screen flex justify-center items-center bg-yellow-200 text-black font-bold text-xl">
-        Site mobil için hazırlanıyor...
-      </div>
-    );
-  }
+  // if (isMobile) {
+  //   // Ekran mobil ise, sadece bu yazıyı göster
+  //   return (
+  //     <div className="w-full h-screen flex justify-center items-center bg-yellow-200 text-black font-bold text-xl">
+  //       Site mobil için hazırlanıyor...
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="flex flex-col">

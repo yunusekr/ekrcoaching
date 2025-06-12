@@ -61,7 +61,7 @@ a:hover {
   margin-bottom: 30px;
   opacity: 0;
   transform: translateX(-100%);
-  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.8s;
 }
 
 .section-head h4.section-head-show {
@@ -285,5 +285,17 @@ p.awesome_line {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-head h4 {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s, transform 0.8s;
+  }
+
+  .item {
+    margin: 0 30px;
   }
 }

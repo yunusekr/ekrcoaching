@@ -56,7 +56,7 @@ function WhyUs({ datas }) {
       <div className="container">
         <div className="row flex flex-col justify-center items-center">
           <div className="section-head col-sm-12">
-            <h4 className="font-[Lora] ">
+            <h4 className="font-[Lora]">
               <span
                 className="font-[Lora] text-[50px]"
                 style={{ textShadow: "0px 15px 4px rgba(0, 0, 0, 0.5)" }}
@@ -74,7 +74,7 @@ function WhyUs({ datas }) {
               </span>
             </h4>
           </div>
-          <div className="flex gap-10">
+          <div className="flex gap-10 md:flex-row flex-col">
             <div className="col-lg-4 col-sm-6">
               <div className="item">
                 <img className="h-[175px]" src={personal} alt="" />
