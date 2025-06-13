@@ -25,8 +25,8 @@ const Navbar = () => {
         <button
           onClick={() => toggleSubMenu(key)}
           className={clsx(
-            "",
-            level === 0 ? "" : "",
+            "w-full flex items-center justify-between text-left py-2",
+            level === 0 ? "text-left" : "",
             "bg-[#f9fafb] hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-200 text-black rounded transition-colors duration-200"
           )}
         >
