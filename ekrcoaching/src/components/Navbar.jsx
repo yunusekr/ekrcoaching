@@ -27,7 +27,7 @@ const Navbar = () => {
           className={clsx(
             "w-full flex items-center justify-between text-left px-4 py-2",
             level === 0 ? "" : "",
-            "bg-[#f9fafb] hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-200 text-black rounded transition-colors duration-200"
+            "bg-[#f9fafb] hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-200 text-black"
           )}
         >
           <span className="ml-0">{label}</span>
@@ -40,6 +40,11 @@ const Navbar = () => {
             />
           )}
         </button>
+        {children && isOpenSub && (
+          <ul className="pl-4 space-y-1 transition-all duration-300 ease-in-out">
+            {children}
+          </ul>
+        )}
       </li>
     );
   };
