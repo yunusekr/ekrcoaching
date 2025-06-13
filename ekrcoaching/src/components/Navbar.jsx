@@ -25,9 +25,9 @@ const Navbar = () => {
         <button
           onClick={() => toggleSubMenu(key)}
           className={clsx(
-            "w-full flex items-center justify-between text-left py-2",
-            level === 0 ? "text-left" : "",
-            "bg-[#f9fafb] hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-200 text-black rounded transition-colors duration-200"
+            "w-full flex items-center justify-between text-left px-4 py-2",
+            level === 0 ? "" : "",
+            "bg-[#f9fafb] hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-200 text-black rounded transition-colors duration-200 active:text-left"
           )}
         >
           <span className="ml-0">{label}</span>
