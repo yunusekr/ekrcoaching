@@ -30,7 +30,7 @@ const Navbar = () => {
             "bg-[#f9fafb] hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-200 text-black rounded transition-colors duration-200"
           )}
         >
-          <span className="ml-1">{label}</span>
+          <span className="ml-0">{label}</span>
           {children && (
             <IoIosArrowDown
               className={clsx(
