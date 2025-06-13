@@ -106,8 +106,8 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 text-gray-700 text-sm bg-gray-50 rounded-b shadow-inner text-[1.2rem] font-semibold text-black">
-          <ul className="space-y-1">
+        <div className="md:hidden px-4 pb-4 text-gray-700 text-sm bg-gray-50 rounded-b shadow-inner text-[1.2rem] ">
+          <ul className="space-y-1 font-semibold text-black">
             <li>
               <a
                 href="/"
