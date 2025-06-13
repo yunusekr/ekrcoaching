@@ -133,7 +133,7 @@ const Navbar = () => {
                   <>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                         href="/salesandmarketing"
                         onClick={() => setIsOpen(false)}
                       >
@@ -142,7 +142,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                         href="/noro"
                         onClick={() => setIsOpen(false)}
                       >
@@ -151,7 +151,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                         href="/timemanagement"
                         onClick={() => setIsOpen(false)}
                       >
@@ -160,7 +160,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                         href="/leadership"
                         onClick={() => setIsOpen(false)}
                       >
@@ -169,7 +169,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                         href="/communucationskills"
                         onClick={() => setIsOpen(false)}
                       >
@@ -178,7 +178,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                         href="/theartofsayingno"
                         onClick={() => setIsOpen(false)}
                       >
@@ -187,7 +187,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                         href="/costmanagement"
                         onClick={() => setIsOpen(false)}
                       >
@@ -199,7 +199,7 @@ const Navbar = () => {
                 <MenuItem label="Bireysel" level={1}>
                   <li>
                     <a
-                      className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                      className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                       href="/goalsetting"
                       onClick={() => setIsOpen(false)}
                     >
@@ -214,7 +214,7 @@ const Navbar = () => {
               <>
                 <li>
                   <a
-                    className="block w-full text-left px-5 py-1 hover:bg-gray-200 rounded"
+                    className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                     href="/coaching"
                     onClick={() => setIsOpen(false)}
                   >
@@ -223,7 +223,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    className="block w-full text-left px-5 py-1 hover:bg-gray-200 rounded"
+                    className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                     href="/mentoring"
                     onClick={() => setIsOpen(false)}
                   >
@@ -233,7 +233,7 @@ const Navbar = () => {
                 <MenuItem label="Danışmanlık" level={1}>
                   <li>
                     <a
-                      className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                      className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                       href="/salesandmarketingconsultancy"
                       onClick={() => setIsOpen(false)}
                     >
@@ -242,7 +242,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a
-                      className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                      className="block w-full text-left px-4 py-1 hover:bg-gray-200 rounded"
                       href="/exportconsultancy"
                       onClick={() => setIsOpen(false)}
                     >
