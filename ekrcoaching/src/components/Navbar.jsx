@@ -25,12 +25,13 @@ const Navbar = () => {
         <button
           onClick={() => toggleSubMenu(key)}
           className={clsx(
-            "w-full flex items-center justify-between text-left px-4 py-2",
+            "w-full flex items-center justify-between px-4 py-2",
             level === 0 ? "" : "ml-4",
             "bg-[#f9fafb] hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-200 text-black rounded transition-colors duration-200"
           )}
         >
-          <span className="ml-0">{label}</span>
+          {/* Burada yazı kesinlikle sola hizalı ve flex-grow ile tüm alanı kaplıyor */}
+          <span className="flex-grow text-left">{label}</span>
           {children && (
             <IoIosArrowDown
               className={clsx(
@@ -107,20 +108,20 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="md:hidden px-4 pb-4 text-gray-700 text-xl bg-gray-50 rounded-b shadow-inner ">
-          <ul className="space-y-1 font-semibold text-black w-full">
-            <li className="w-full">
+          <ul className="space-y-1 font-semibold text-black">
+            <li>
               <a
                 href="/"
-                className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
+                className="block px-4 py-2 hover:bg-gray-100 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 Anasayfa
               </a>
             </li>
-            <li className="w-full">
+            <li>
               <a
                 href="/aboutus"
-                className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
+                className="block px-4 py-2 hover:bg-gray-100 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 Hakkımızda
@@ -133,7 +134,7 @@ const Navbar = () => {
                   <>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block px-6 py-1 hover:bg-gray-100 rounded"
                         href="/salesandmarketing"
                         onClick={() => setIsOpen(false)}
                       >
@@ -142,7 +143,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block px-6 py-1 hover:bg-gray-100 rounded"
                         href="/noro"
                         onClick={() => setIsOpen(false)}
                       >
@@ -151,7 +152,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block px-6 py-1 hover:bg-gray-100 rounded"
                         href="/timemanagement"
                         onClick={() => setIsOpen(false)}
                       >
@@ -160,7 +161,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block px-6 py-1 hover:bg-gray-100 rounded"
                         href="/leadership"
                         onClick={() => setIsOpen(false)}
                       >
@@ -169,7 +170,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block px-6 py-1 hover:bg-gray-100 rounded"
                         href="/communucationskills"
                         onClick={() => setIsOpen(false)}
                       >
@@ -178,7 +179,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block px-6 py-1 hover:bg-gray-100 rounded"
                         href="/theartofsayingno"
                         onClick={() => setIsOpen(false)}
                       >
@@ -187,7 +188,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        className="block px-6 py-1 hover:bg-gray-100 rounded"
                         href="/costmanagement"
                         onClick={() => setIsOpen(false)}
                       >
@@ -199,7 +200,7 @@ const Navbar = () => {
                 <MenuItem label="Bireysel" level={1}>
                   <li>
                     <a
-                      className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                      className="block px-6 py-1 hover:bg-gray-100 rounded"
                       href="/goalsetting"
                       onClick={() => setIsOpen(false)}
                     >
@@ -214,7 +215,7 @@ const Navbar = () => {
               <>
                 <li>
                   <a
-                    className="block w-full text-left px-5 py-1 hover:bg-gray-200 rounded"
+                    className="block px-5 py-1 hover:bg-gray-100 rounded"
                     href="/coaching"
                     onClick={() => setIsOpen(false)}
                   >
@@ -223,7 +224,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    className="block w-full text-left px-5 py-1 hover:bg-gray-200 rounded"
+                    className="block px-5 py-1 hover:bg-gray-100 rounded"
                     href="/mentoring"
                     onClick={() => setIsOpen(false)}
                   >
@@ -233,7 +234,7 @@ const Navbar = () => {
                 <MenuItem label="Danışmanlık" level={1}>
                   <li>
                     <a
-                      className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                      className="block px-6 py-1 hover:bg-gray-100 rounded"
                       href="/salesandmarketingconsultancy"
                       onClick={() => setIsOpen(false)}
                     >
@@ -242,7 +243,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a
-                      className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                      className="block px-6 py-1 hover:bg-gray-100 rounded"
                       href="/exportconsultancy"
                       onClick={() => setIsOpen(false)}
                     >
@@ -253,19 +254,19 @@ const Navbar = () => {
               </>
             </MenuItem>
 
-            <li className="w-full">
+            <li>
               <a
                 href="/textilesolutions"
-                className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
+                className="block px-4 py-2 hover:bg-gray-100 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 Tekstil Çözümleri
               </a>
             </li>
-            <li className="w-full">
+            <li>
               <a
                 href="/contact"
-                className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
+                className="block px-4 py-2 hover:bg-gray-100 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 İletişim
