@@ -8,6 +8,7 @@ const veriler = {
     Vision: "Vizyon",
     Mission: "Misyon",
     Values: "Değerler",
+    TextileSolutions: "Tekstil Çözümleri",
     Contact: "İletişim",
     Wearelisteningtoyou: "Sİzİ Dİnlİyoruz",
     Institutional: "Kurumsal",
@@ -192,6 +193,42 @@ const veriler = {
       "Markanızın global görünürlüğünü artırmak için etkili pazarlama çözümleri.",
     ExportcConsultancytext9:
       "Amacımız, işletmenizin uluslararası pazarlarda sürdürülebilir bir büyüme yakalaması ve dünya çapında bir marka haline gelmesi için gerekli desteği sağlamaktır.",
+
+    textileSolutionsText1: "“İhtiyaçlarınıza Özel Yenilikçi Yaklaşımlar”",
+    textileSolutionsText2:
+      "Günümüzün hızla değişen ve rekabetçi tekstil sektöründe, işletmelerin sürdürülebilirlik, verimlilik, kalite, satış ve pazarlama konularında öncü olması büyük önem taşımaktadır. 15 yılı aşkın sektör tecrübemizle, EKR Akademi olarak, tekstil firmalarının karşılaştığı zorluklara yenilikçi ve entegre çözümler sunarak, onların operasyonlarını optimize etmelerine, üretim kalitelerini artırmalarına, pazarlama stratejilerini güçlendirmelerine, satış performanslarını yükseltmelerine ve rekabet avantajı elde etmelerine yardımcı oluyoruz. Bu yolculukta, güvenilir, sürdürülebilir ve ekolojik iş ortaklarımızla çalışmanın önemini biliyor ve bu prensiplerle hareket ediyoruz.",
+    textileSolutionsText3: "Neden Tekstil Çözümleri Önemlidir?",
+    textileSolutionsText4:
+      "Tekstil endüstrisi, hammaddeden nihai ürüne kadar uzanan karmaşık bir süreçler zincirine sahiptir. Bu zincirde karşılaşılan her türlü aksaklık, üretim maliyetlerini artırabilir, teslimat sürelerini uzatabilir, pazar erişimini kısıtlayabilir ve marka itibarını olumsuz etkileyebilir.Doğru tekstil çözümleri ile:",
+    textileSolutionsText5:
+      "Verimlilik Artışı: Üretim süreçlerinizdeki darboğazları ortadan kaldırarak zaman ve maliyet tasarrufu sağlayabilirsiniz.",
+    textileSolutionsText6:
+      "Kalite Kontrolü: Ürünlerinizin her aşamasında yüksek standartlarda kalite güvencesi sağlayarak müşteri memnuniyetini artırabilirsiniz.",
+    textileSolutionsText7:
+      "Sürdürülebilirlik: Çevre dostu üretim teknikleri ve atık yönetimi ile sosyal sorumluluk bilincinizi güçlendirebilirsiniz. Bu alanda ekolojik partnerlerimizle olan işbirliğimiz, sizlere en çevre dostu çözümleri sunmamızı sağlar.",
+    textileSolutionsText8:
+      "Rekabet Avantajı: Pazarda öne çıkan yenilikçi ürünler ve hizmetler sunarak pazar payınızı genişletebilirsiniz.",
+    textileSolutionsText9:
+      "Satış ve Pazarlama Başarısı: Ürünlerinizi doğru hedef kitleye ulaştırarak ve etkili stratejilerle satışlarınızı artırarak markanızın değerini yükseltebilirsiniz.",
+    textileSolutionsText10: "Sunduğumuz Tekstil Çözümleri",
+    textileSolutionsText11:
+      "EKR Akademi, 15 yıllık sektör tecrübesinin getirdiği derin bilgi birikimiyle, tekstil sektörünün farklı alanlarındaki ihtiyaçları karşılamak üzere geniş bir yelpazede tekstil çözümleri sunmaktadır. Uzman ekibimiz ve son teknoloji ekipmanlarımızla, işletmenizin özel gereksinimlerine uygun, anahtar teslim projeler geliştiriyoruz. Güvenilir iş ortaklarımızla olan güçlü bağlarımız sayesinde, projelerinizde en kaliteli hammadde ve hizmetleri garanti ediyoruz.İşte başlıca hizmet alanlarımız:",
+    textileSolutionsText12:
+      "Üretim Süreçleri Danışmanlığı: Hammaddeden bitmiş ürüne kadar tüm üretim aşamalarınızı analiz ederek verimlilik artırıcı öneriler sunuyoruz.",
+    textileSolutionsText13:
+      "Otomasyon ve Dijitalleşme: Üretim hatlarınızda otomasyon sistemleri kurarak insan hatasını minimize ediyor ve operasyonel verimliliği artırıyoruz.",
+    textileSolutionsText14:
+      "Kalite Güvence Sistemleri: Uluslararası standartlara uygun kalite kontrol sistemleri oluşturarak ürünlerinizin tutarlılığını sağlıyoruz.",
+    textileSolutionsText15:
+      "Sürdürülebilir Tekstil Çözümleri: Organik pamuk, geri dönüştürülmüş elyaf kullanımı ve su tasarrufu gibi sürdürülebilir uygulamaları iş süreçlerinize entegre ediyoruz. Bu alanda, ekolojik prensiplere bağlı partnerlerimizle çalışarak çevreye duyarlı çözümler sunuyoruz.",
+    textileSolutionsText16:
+      "Satış ve Pazarlama Stratejileri: Tekstil ürünleriniz için pazar araştırması, hedef kitle analizi, marka konumlandırma, dijital pazarlama stratejileri ve satış kanalı geliştirme gibi konularda kapsamlı danışmanlık hizmetleri sunuyoruz.Ürünlerinizin doğru pazarlara, doğru mesajlarla ulaşmasını sağlayarak satış hacminizi artırmanıza yardımcı oluyoruz.",
+    textileSolutionsText17:
+      "Ar-Ge ve İnovasyon Destekleri: Yeni ürün geliştirme, malzeme bilimi ve proses iyileştirme konularında Ar-Ge projelerinize destek oluyoruz.",
+    textileSolutionsText18: "Geleceğe Yönelik Tekstil Endüstrisi",
+    textileSolutionsText19:
+      "Tekstil sektörü, hızla değişen müşteri beklentileri ve teknolojik gelişmelerle sürekli evrim geçirmektedir. 15 yıllık tecrübemizle ve güvenilir, sürdürülebilir, ekolojik partnerlerimizle birlikte, bu değişimi yakından takip ediyor ve müşterilerimizin geleceğin tekstil endüstrisinde lider olmalarına yardımcı olmak için en güncel tekstil çözümlerini sunuyoruz.",
+
     Contactcontactus: "Bize Ulaşın",
     ContactName: "İsim",
     ContactEmail: "E-mail",
@@ -214,6 +251,7 @@ const veriler = {
     Vision: "Vision",
     Mission: "Mission",
     Values: "Values",
+    TextileSolutions: "Textile Solutions",
     Contact: "Contact",
     Wearelisteningtoyou: "We Are Listening To You",
     Institutional: "Corporate",
@@ -402,6 +440,42 @@ const veriler = {
       "Effective marketing solutions to increase the global visibility of your brand.",
     ExportcConsultancytext9:
       "Our aim is to provide the necessary support for your business to achieve sustainable growth in international markets and become a global brand.",
+
+    textileSolutionsText1: "“Innovative Approaches Tailored to Your Needs”",
+    textileSolutionsText2:
+      "In today's rapidly evolving and competitive textile sector, it's crucial for businesses to lead in sustainability, efficiency, quality, and sales and marketing. With over 15 years of industry experience, we, as EKR Academy, offer innovative and integrated solutions to help textile firms overcome challenges, optimize operations, enhance production quality, strengthen marketing strategies, boost sales performance, and gain a competitive edge. Throughout this journey, we understand the importance of working with reliable, sustainable, and ecological partners, and we operate with these principles at our core.",
+    textileSolutionsText3: "Why Are Textile Solutions Essential?",
+    textileSolutionsText4:
+      "The textile industry involves a complex chain of processes, from raw materials to the final product. Any disruption in this chain can increase production costs, extend delivery times, limit market access, and negatively impact brand reputation.With the right textile solutions, you can achieve:",
+    textileSolutionsText5:
+      "Increased Efficiency: Eliminate bottlenecks in your production processes, saving time and costs.",
+    textileSolutionsText6:
+      "Quality Control: Ensure high standards of quality assurance at every stage of your products, enhancing customer satisfaction.",
+    textileSolutionsText7:
+      "Sustainability: Strengthen your commitment to social responsibility through eco-friendly production techniques and waste management. Our collaboration with ecological partners in this area ensures we provide you with the most environmentally sound solutions.",
+    textileSolutionsText8:
+      "Competitive Advantage: Expand your market share by offering innovative products and services that stand out in the market.",
+    textileSolutionsText9:
+      "Sales and Marketing Success: Boost your brand value by reaching the right target audience with your products and increasing sales through effective strategies.",
+    textileSolutionsText10: "Our Comprehensive Textile Solutions",
+    textileSolutionsText11:
+      "Drawing on over 15 years of deep industry knowledge, EKR Academy offers a wide range of textile solutions designed to meet the diverse needs of the textile sector. With our expert team and state-of-the-art equipment, we develop tailored, turnkey projects that suit your business's specific requirements. Our strong ties with reliable business partners guarantee the highest quality raw materials and services for your projects.Here are our main service areas:",
+    textileSolutionsText12:
+      "Production Process Consulting: We analyze all stages of your production, from raw material to finished product, offering recommendations to boost efficiency.",
+    textileSolutionsText13:
+      "Automation and Digitalization: We implement automation systems in your production lines to minimize human error and increase operational efficiency.",
+    textileSolutionsText14:
+      "Quality Assurance Systems: We establish quality control systems compliant with international standards, ensuring the consistency of your products.",
+    textileSolutionsText15:
+      "Sustainable Textile Solutions: We integrate sustainable practices such as organic cotton usage, recycled fiber utilization, and water conservation into your business processes. In this area, we work with partners committed to ecological principles to offer environmentally friendly solutions.",
+    textileSolutionsText16:
+      "Sales and Marketing Strategies: We provide comprehensive consulting services covering market research, target audience analysis, brand positioning, digital marketing strategies, and sales channel development for your textile products.We help you increase your sales volume by ensuring your products reach the right markets with the right messages.",
+    textileSolutionsText17:
+      "R&D and Innovation Support: We assist your R&D projects in new product development, material science, and process improvement.",
+    textileSolutionsText18: "The Future of the Textile Industry",
+    textileSolutionsText19:
+      "The textile sector is constantly evolving with rapidly changing customer expectations and technological advancements. With our 15 years of experience and in collaboration with our reliable, sustainable, and ecological partners, we closely monitor these changes. We provide the most up-to-date textile solutions to help our clients become leaders in the future of the textile industry.",
+
     Contactcontactus: "Contact Us",
     ContactName: "Name",
     ContactEmail: "E-mail",

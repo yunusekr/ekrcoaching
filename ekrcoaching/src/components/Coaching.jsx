@@ -100,7 +100,7 @@ function Coaching({ datas }) {
         ></div>
       </div>
       <div
-        className="lg:hidden flex flex-col items-center h-[100vh] w-full text-white gap-y-14"
+        className="lg:hidden flex flex-col items-center h-[100vh] w-full text-white gap-y-10 relative"
         style={{
           backgroundImage: `
           url(${coaching})
@@ -111,8 +111,10 @@ function Coaching({ datas }) {
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-65 h-[100vh]"></div>
-        <div className="flex flex-col items-center mt-40 slide-in-left">
-          <p className="text-[8.5vw] font-[Lora]">{datas.Coachingtext1}</p>
+        <div className="flex flex-col items-center slide-in-left">
+          <p className="text-[7vw] font-[Lora] text-center">
+            {datas.Coachingtext1}
+          </p>
           <p
             className="text-[3.5vw] w-[96%] italic"
             style={{
@@ -123,7 +125,7 @@ function Coaching({ datas }) {
             {datas.Coachingtext2}
           </p>
         </div>
-        <div className="flex flex-col items-center slide-in-left">
+        <div className="flex flex-col items-center slide-in-left gap-5">
           <p
             className="text-[3.5vw] w-[95%] italic"
             style={{
@@ -165,6 +167,18 @@ function Coaching({ datas }) {
               {datas.Coachingtext8}
             </li>
           </div>
+          <p
+            className="text-[3.5vw] w-[90%] italic"
+            style={{ fontFamily: "Playfair Display, serif", textIndent: "3vw" }}
+          >
+            {datas.Coachingtext9}
+          </p>
+          <p
+            className="text-[3.5vw] w-[90%] italic"
+            style={{ fontFamily: "Playfair Display, serif", textIndent: "3vw" }}
+          >
+            {datas.Coachingtext10}
+          </p>
         </div>
       </div>
     </>

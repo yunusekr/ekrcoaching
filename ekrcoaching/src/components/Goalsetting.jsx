@@ -85,7 +85,7 @@ function Goalsetting({ datas }) {
       </div>
       {/* mobil */}
       <div
-        className="lg:hidden flex flex-col items-center h-[100vh] w-full text-white gap-y-14"
+        className="lg:hidden flex flex-col items-center h-[100vh] w-full text-white gap-y-10 relative"
         style={{
           backgroundImage: `
                 url("https://seldadogancan.com/wp-content/uploads/2023/03/smart-hedefler.jpeg")

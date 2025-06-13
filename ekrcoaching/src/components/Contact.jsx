@@ -181,33 +181,33 @@ function Contact({ datas }) {
             </button>
           </div>
         </form>
-        <div className="ml-10 md:flex flex-col justify-center items-center gap-7 hidden">
-          <div className="flex gap-5 w-full">
-            <i className="fa-solid fa-envelope text-blue-300 text-[10vw]"></i>
+        <div className=" flex flex-col justify-center items-center gap-7 ">
+          <div className="flex gap-5 w-full items-center justify-center">
+            <i className="fa-solid fa-envelope text-blue-300 lg:text-[5vw] text-[10vw] "></i>
             <p
-              className="text-[5vw] text-white"
+              className="lg:text-[3vw] text-[5vw] text-white"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               kurumsal@ekracademy.com
             </p>
           </div>
-          <div className="flex gap-5 w-full">
-            <i className="fa-solid fa-phone text-green-300 text-[10vw]"></i>
+          <div className="flex gap-5 w-full items-center justify-center">
+            <i className="fa-solid fa-location-dot text-red-300 lg:text-[5vw] text-[10vw]"></i>
             <p
-              className="text-[5vw] text-white"
+              className="lg:text-[3vw] text-[5vw] text-white"
+              style={{ fontFamily: "Playfair Display, serif" }}
+            >
+              Ulukent-İzmir 35620
+            </p>
+          </div>
+          <div className="flex gap-5 w-full items-center justify-center">
+            <i className="fa-solid fa-phone text-green-300 lg:text-[5vw] text-[10vw]"></i>
+            <p
+              className="lg:text-[3vw] text-[5vw] text-white"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               0533 325 10 89 <br />
               0533 899 10 89
-            </p>
-          </div>
-          <div className="flex gap-5 w-full">
-            <i className="fa-solid fa-location-dot text-red-300 text-[10vw]"></i>
-            <p
-              className="text-[5vw] text-white"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
-              Ulukent-İzmir 35620
             </p>
           </div>
         </div>

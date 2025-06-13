@@ -97,7 +97,7 @@ function Exportconsultancy({ datas }) {
       </div>
       {/* mobil */}
       <div
-        className="lg:hidden flex flex-col items-center h-[100vh] w-full text-white gap-y-14"
+        className="lg:hidden flex flex-col items-center h-[100vh] w-full text-white gap-y-10 relative"
         style={{
           backgroundImage: `
                 url(${exportconsulting})

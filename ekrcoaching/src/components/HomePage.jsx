@@ -18,6 +18,7 @@ function HomePage({ datas }) {
         Site mobil için hazırlanıyor...
       </div> */}
 
+        <deneme></deneme>
         <div className="flex flex-col justify-center items-center w-full">
           <div className="container-text">
             {/* <h1>{datas.Wearelisteningtoyou}</h1> */}

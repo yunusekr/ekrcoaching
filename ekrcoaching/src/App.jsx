@@ -20,6 +20,7 @@ import Mentoring from "./components/Mentoring";
 import SalesAndMarketingConsultancy from "./components/SalesAndMarketingConsultancy";
 import Exportconsultancy from "./components/Exportconsultancy";
 import veriler from "./veriler";
+import TextileSolutions from "./components/TextileSolutions";
 
 function App() {
   const [datas, Setdatas] = useState({});
@@ -99,6 +100,9 @@ function App() {
         </Route>
         <Route exact path="/exportconsultancy">
           <Exportconsultancy datas={datas} />
+        </Route>
+        <Route exact path="/textilesolutions">
+          <TextileSolutions datas={datas} />
         </Route>
         <Route exact path="/contact">
           <Contact datas={datas} />
