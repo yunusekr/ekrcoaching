@@ -42,7 +42,7 @@ function Contact({ datas }) {
 
     if (Object.keys(errors).length === 0) {
       console.log(data);
-      // sendEmail(data);
+      sendEmail(data);
 
       const contactElement = document.querySelector(".contact");
       if (contactElement) {
