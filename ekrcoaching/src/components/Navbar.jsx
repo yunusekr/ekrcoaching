@@ -27,7 +27,7 @@ const Navbar = () => {
           className={clsx(
             "w-full flex items-center justify-between text-left px-4 py-2",
             level === 0 ? "" : "ml-1",
-            "bg-[#f9fafb] hover:bg-blue-100 focus:bg-white active:bg-white text-black rounded transition-colors duration-200"
+            "bg-[#f9fafb] text-black rounded transition-colors duration-200"
           )}
         >
           <span className="ml-0">{label}</span>
@@ -106,12 +106,12 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 text-gray-700 text-xl bg-gray-50 rounded-b shadow-inner ">
-          <ul className="space-y-1 font-semibold text-black">
+        <div className="md:hidden px-4 pb-4 text-gray-700 text-xl bg-gray-50 rounded-b shadow-inner">
+          <ul className="space-y-1 font-semibold text-black text-left">
             <li>
               <a
                 href="/"
-                className="block px-4 py-2 hover:bg-gray-100 rounded"
+                className="block px-4 py-2 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 Anasayfa
@@ -120,7 +120,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/aboutus"
-                className="block px-4 py-2 hover:bg-gray-100 rounded"
+                className="block px-4 py-2 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 Hakkımızda
@@ -133,7 +133,7 @@ const Navbar = () => {
                   <>
                     <li>
                       <a
-                        className="block px-6 py-1 hover:bg-gray-100 rounded"
+                        className="block px-6 py-1 rounded"
                         href="/salesandmarketing"
                         onClick={() => setIsOpen(false)}
                       >
@@ -142,7 +142,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block px-6 py-1 hover:bg-gray-100 rounded"
+                        className="block px-6 py-1 rounded"
                         href="/noro"
                         onClick={() => setIsOpen(false)}
                       >
@@ -151,7 +151,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block px-6 py-1 hover:bg-gray-100 rounded"
+                        className="block px-6 py-1 rounded"
                         href="/timemanagement"
                         onClick={() => setIsOpen(false)}
                       >
@@ -160,7 +160,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block px-6 py-1 hover:bg-gray-100 rounded"
+                        className="block px-6 py-1 rounded"
                         href="/leadership"
                         onClick={() => setIsOpen(false)}
                       >
@@ -169,7 +169,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block px-6 py-1 hover:bg-gray-100 rounded"
+                        className="block px-6 py-1 rounded"
                         href="/communucationskills"
                         onClick={() => setIsOpen(false)}
                       >
@@ -178,7 +178,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block px-6 py-1 hover:bg-gray-100 rounded"
+                        className="block px-6 py-1 rounded"
                         href="/theartofsayingno"
                         onClick={() => setIsOpen(false)}
                       >
@@ -187,7 +187,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <a
-                        className="block px-6 py-1 hover:bg-gray-100 rounded"
+                        className="block px-6 py-1 rounded"
                         href="/costmanagement"
                         onClick={() => setIsOpen(false)}
                       >
@@ -199,7 +199,7 @@ const Navbar = () => {
                 <MenuItem label="Bireysel" level={1}>
                   <li>
                     <a
-                      className="block px-6 py-1 hover:bg-gray-100 rounded"
+                      className="block px-6 py-1 rounded"
                       href="/goalsetting"
                       onClick={() => setIsOpen(false)}
                     >
@@ -214,7 +214,7 @@ const Navbar = () => {
               <>
                 <li>
                   <a
-                    className="block px-5 py-1 hover:bg-gray-100 rounded"
+                    className="block px-5 py-1 rounded"
                     href="/coaching"
                     onClick={() => setIsOpen(false)}
                   >
@@ -223,7 +223,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    className="block px-5 py-1 hover:bg-gray-100 rounded"
+                    className="block px-5 py-1 rounded"
                     href="/mentoring"
                     onClick={() => setIsOpen(false)}
                   >
@@ -233,7 +233,7 @@ const Navbar = () => {
                 <MenuItem label="Danışmanlık" level={1}>
                   <li>
                     <a
-                      className="block px-6 py-1 hover:bg-gray-100 rounded"
+                      className="block px-6 py-1 rounded"
                       href="/salesandmarketingconsultancy"
                       onClick={() => setIsOpen(false)}
                     >
@@ -242,7 +242,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a
-                      className="block px-6 py-1 hover:bg-gray-100 rounded"
+                      className="block px-6 py-1 rounded"
                       href="/exportconsultancy"
                       onClick={() => setIsOpen(false)}
                     >
@@ -256,7 +256,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/textilesolutions"
-                className="block px-4 py-2 hover:bg-gray-100 rounded"
+                className="block px-4 py-2 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 Tekstil Çözümleri
@@ -265,7 +265,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/contact"
-                className="block px-4 py-2 hover:bg-gray-100 rounded"
+                className="block px-4 py-2 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 İletişim
