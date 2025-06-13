@@ -1,40 +1,47 @@
 import React, { useState } from "react";
+import clsx from "clsx";
 import ekrlogo from "../assets/ekrlogo(tr2).png";
 import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [submenuOpen, setSubmenuOpen] = useState({});
+  const [isOpen, setIsOpen] = useState(false);
+  const [openMenus, setOpenMenus] = useState({});
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-  const toggleSubmenu = (key) => {
-    setSubmenuOpen((prev) => ({ ...prev, [key]: !prev[key] }));
+  const toggleSubMenu = (key) => {
+    setOpenMenus((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
   };
 
-  // Menü öğesi bileşeni
-  const MenuItem = ({ label, children }) => {
-    const key = label.toLowerCase().replace(/\s/g, "_");
-    const isOpen = submenuOpen[key];
+  const MenuItem = ({ label, children, level = 0 }) => {
+    const key = label.toLowerCase().replace(/\s+/g, "_");
+    const isOpenSub = openMenus[key];
 
     return (
       <li className="w-full">
         <button
-          onClick={() => toggleSubmenu(key)}
-          className="flex justify-between items-center w-full px-4 py-2 text-left bg-gray-100 hover:bg-gray-200 rounded"
-          style={{ textAlign: "left" }}
+          onClick={() => toggleSubMenu(key)}
+          className={clsx(
+            "w-full flex items-center justify-between text-left px-4 py-2",
+            "bg-[#f9fafb] hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-200 text-black rounded transition-colors duration-200"
+          )}
+          style={{ gap: "0.5rem", textAlign: "left" }} // Sola hizalama garantisi
         >
-          <span>{label}</span>
+          <span className="ml-1 flex-1 text-left">{label}</span>
           {children && (
             <IoIosArrowDown
-              className={`transition-transform duration-300 ${
-                isOpen ? "rotate-180" : ""
-              }`}
+              className={clsx(
+                "transition-transform duration-200",
+                isOpenSub ? "rotate-180" : "rotate-0"
+              )}
             />
           )}
         </button>
-        {children && isOpen && (
-          <ul className="pl-6 mt-1 space-y-1" style={{ textAlign: "left" }}>
+        {children && isOpenSub && (
+          <ul className="pl-4 space-y-1 transition-all duration-300 ease-in-out text-left">
             {children}
           </ul>
         )}
@@ -43,34 +50,28 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
-        <img src={ekrlogo} alt="Logo" className="w-12 h-9" />
-        {/* Hamburger */}
-        <button
-          onClick={toggleMenu}
-          className="md:hidden p-2 focus:outline-none"
-          aria-label="Toggle menu"
-        >
-          <div
-            className={`w-6 h-[2px] bg-black mb-1 transition-transform duration-300 ${
-              menuOpen ? "rotate-45 translate-y-[7px]" : ""
-            }`}
-          />
-          <div
-            className={`w-6 h-[2px] bg-black mb-1 transition-opacity duration-300 ${
-              menuOpen ? "opacity-0" : "opacity-100"
-            }`}
-          />
-          <div
-            className={`w-6 h-[2px] bg-black transition-transform duration-300 ${
-              menuOpen ? "-rotate-45 -translate-y-[7px]" : ""
-            }`}
-          />
-        </button>
+    <nav className="bg-white shadow-md sticky top-0 z-50 font-sans md:hidden h-18">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <div className="text-xl font-bold text-blue-600">
+          <img className="w-[48px] h-[36px]" src={ekrlogo} alt="Logo" />
+        </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-gray-700 font-medium text-sm">
+        <div className="md:hidden">
+          <label className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center relative">
+            <input
+              type="checkbox"
+              className="hidden peer"
+              checked={isOpen}
+              onChange={toggleMenu}
+              aria-label="Toggle menu"
+            />
+            <div className="w-[50%] h-[2px] bg-black rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]"></div>
+            <div className="w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-center peer-checked:hidden"></div>
+            <div className="w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]"></div>
+          </label>
+        </div>
+
+        <ul className="hidden md:flex space-x-6 font-medium text-gray-700 text-sm">
           <li>
             <a href="/" className="hover:text-blue-600">
               Anasayfa
@@ -104,24 +105,25 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-gray-50 px-4 pb-6 text-gray-900 font-semibold">
-          <ul className="space-y-1" style={{ textAlign: "left" }}>
-            <li>
+      {isOpen && (
+        <div className="md:hidden px-4 pb-4 text-gray-700 text-xl bg-gray-50 rounded-b shadow-inner ">
+          <ul className="space-y-1 font-semibold text-black w-full text-left">
+            <li className="w-full">
               <a
                 href="/"
-                className="block px-4 py-2 rounded hover:bg-gray-200"
-                onClick={() => setMenuOpen(false)}
+                className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
+                onClick={() => setIsOpen(false)}
+                style={{ textAlign: "left" }}
               >
                 Anasayfa
               </a>
             </li>
-            <li>
+            <li className="w-full">
               <a
                 href="/aboutus"
-                className="block px-4 py-2 rounded hover:bg-gray-200"
-                onClick={() => setMenuOpen(false)}
+                className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
+                onClick={() => setIsOpen(false)}
+                style={{ textAlign: "left" }}
               >
                 Hakkımızda
               </a>
@@ -129,24 +131,92 @@ const Navbar = () => {
 
             <MenuItem label="Eğitimler">
               <>
-                <li>
-                  <a
-                    href="/salesandmarketing"
-                    className="block px-4 py-2 rounded hover:bg-gray-200"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Kurumsal
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/goalsetting"
-                    className="block px-4 py-2 rounded hover:bg-gray-200"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Bireysel
-                  </a>
-                </li>
+                <MenuItem label="Kurumsal" level={1}>
+                  <>
+                    <li>
+                      <a
+                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        href="/salesandmarketing"
+                        onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
+                      >
+                        Satış & Pazarlama
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        href="/noro"
+                        onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
+                      >
+                        Nöro Satış
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        href="/timemanagement"
+                        onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
+                      >
+                        Zaman Yönetimi
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        href="/leadership"
+                        onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
+                      >
+                        Liderlik
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        href="/communucationskills"
+                        onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
+                      >
+                        İletişim Becerileri
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        href="/theartofsayingno"
+                        onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
+                      >
+                        Hayır Diyebilme Sanatı
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                        href="/costmanagement"
+                        onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
+                      >
+                        Maliyet Yönetimi
+                      </a>
+                    </li>
+                  </>
+                </MenuItem>
+                <MenuItem label="Bireysel" level={1}>
+                  <li>
+                    <a
+                      className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                      href="/goalsetting"
+                      onClick={() => setIsOpen(false)}
+                      style={{ textAlign: "left" }}
+                    >
+                      Hedef Belirleme
+                    </a>
+                  </li>
+                </MenuItem>
               </>
             </MenuItem>
 
@@ -154,40 +224,65 @@ const Navbar = () => {
               <>
                 <li>
                   <a
+                    className="block w-full text-left px-5 py-1 hover:bg-gray-200 rounded"
                     href="/coaching"
-                    className="block px-4 py-2 rounded hover:bg-gray-200"
-                    onClick={() => setMenuOpen(false)}
+                    onClick={() => setIsOpen(false)}
+                    style={{ textAlign: "left" }}
                   >
                     Koçluk
                   </a>
                 </li>
                 <li>
                   <a
+                    className="block w-full text-left px-5 py-1 hover:bg-gray-200 rounded"
                     href="/mentoring"
-                    className="block px-4 py-2 rounded hover:bg-gray-200"
-                    onClick={() => setMenuOpen(false)}
+                    onClick={() => setIsOpen(false)}
+                    style={{ textAlign: "left" }}
                   >
                     Mentorluk
                   </a>
                 </li>
+                <MenuItem label="Danışmanlık" level={1}>
+                  <li>
+                    <a
+                      className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                      href="/salesandmarketingconsultancy"
+                      onClick={() => setIsOpen(false)}
+                      style={{ textAlign: "left" }}
+                    >
+                      Satış ve Pazarlama Danışmanlığı
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
+                      href="/exportconsultancy"
+                      onClick={() => setIsOpen(false)}
+                      style={{ textAlign: "left" }}
+                    >
+                      İhracat Danışmanlığı
+                    </a>
+                  </li>
+                </MenuItem>
               </>
             </MenuItem>
 
-            <li>
+            <li className="w-full">
               <a
                 href="/textilesolutions"
-                className="block px-4 py-2 rounded hover:bg-gray-200"
-                onClick={() => setMenuOpen(false)}
+                className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
+                onClick={() => setIsOpen(false)}
+                style={{ textAlign: "left" }}
               >
                 Tekstil Çözümleri
               </a>
             </li>
-
-            <li>
+            <li className="w-full">
               <a
                 href="/contact"
-                className="block px-4 py-2 rounded hover:bg-gray-200"
-                onClick={() => setMenuOpen(false)}
+                className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
+                onClick={() => setIsOpen(false)}
+                style={{ textAlign: "left" }}
               >
                 İletişim
               </a>
