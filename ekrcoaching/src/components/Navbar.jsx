@@ -39,11 +39,7 @@ const Navbar = () => {
             />
           )}
         </button>
-        {children && isOpenSub && (
-          <ul className="space-y-1 transition-all duration-300 ease-in-out">
-            {children}
-          </ul>
-        )}
+        {children && isOpenSub && <ul className="">{children}</ul>}
       </li>
     );
   };
