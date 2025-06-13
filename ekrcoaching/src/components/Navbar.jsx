@@ -65,13 +65,13 @@ const Navbar = () => {
               onChange={toggleMenu}
               aria-label="Toggle menu"
             />
-            {/* <div className="w-[50%] h-[2px] bg-black rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]"></div>
+            <div className="w-[50%] h-[2px] bg-black rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]"></div>
             <div className="w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-center peer-checked:hidden"></div>
-            <div className="w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]"></div> */}
+            <div className="w-[50%] h-[2px] bg-black rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]"></div>
           </label>
         </div>
 
-        <ul className="hidden md:flex space-x-6 font-medium text-gray-700 text-sm">
+        <ul className="hidden md:flex font-medium text-gray-700 text-sm">
           <li>
             <a href="/" className="hover:text-blue-600">
               Anasayfa
