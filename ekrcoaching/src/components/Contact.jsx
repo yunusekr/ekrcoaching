@@ -160,7 +160,7 @@ function Contact({ datas }) {
           </div>
 
           <div className="button-container">
-            <button className="send font-[Lora]" type="submit">
+            <button className="send font-[Lora] slideright" type="submit">
               <div className="svg-wrapper-1">
                 <div className="svg-wrapper">
                   <svg
