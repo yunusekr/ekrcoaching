@@ -27,7 +27,7 @@ const Navbar = () => {
           className={clsx(
             "w-full flex items-center justify-between text-left px-4 py-2",
             level === 0 ? "" : "",
-            "bg-[#f9fafb] hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-200 text-black rounded transition-colors duration-200"
+            "bg-[#f9fafb] hover:bg-blue-500 focus:bg-blue-500 active:bg-blue-500 text-black rounded transition-colors duration-200"
           )}
         >
           <span className="ml-0">{label}</span>
@@ -71,7 +71,7 @@ const Navbar = () => {
           </label>
         </div>
 
-        <ul className="hidden md:flex font-medium text-gray-700 text-sm">
+        <ul className="hidden md:flex space-x-6 font-medium text-gray-700 text-sm">
           <li>
             <a href="/" className="hover:text-blue-600">
               Anasayfa
