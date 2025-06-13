@@ -26,11 +26,9 @@ const Navbar = () => {
           onClick={() => toggleSubMenu(key)}
           className={clsx(
             "w-full flex items-center justify-between text-left px-4 py-2",
-            // Burada level ile farklı padding ayarı yapabiliriz, örneğin iç içe menüler için
-            level === 0 ? "" : "",
             "bg-[#f9fafb] hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-200 text-black rounded transition-colors duration-200"
           )}
-          style={{ gap: "0.5rem" }} // Ok ile yazı arasında biraz boşluk
+          style={{ gap: "0.5rem", textAlign: "left" }} // Sola hizalama garantisi
         >
           <span className="ml-1 flex-1 text-left">{label}</span>
           {children && (
@@ -43,7 +41,7 @@ const Navbar = () => {
           )}
         </button>
         {children && isOpenSub && (
-          <ul className="pl-4 space-y-1 transition-all duration-300 ease-in-out">
+          <ul className="pl-4 space-y-1 transition-all duration-300 ease-in-out text-left">
             {children}
           </ul>
         )}
@@ -109,12 +107,13 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="md:hidden px-4 pb-4 text-gray-700 text-xl bg-gray-50 rounded-b shadow-inner ">
-          <ul className="space-y-1 font-semibold text-black w-full">
+          <ul className="space-y-1 font-semibold text-black w-full text-left">
             <li className="w-full">
               <a
                 href="/"
                 className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
                 onClick={() => setIsOpen(false)}
+                style={{ textAlign: "left" }}
               >
                 Anasayfa
               </a>
@@ -124,6 +123,7 @@ const Navbar = () => {
                 href="/aboutus"
                 className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
                 onClick={() => setIsOpen(false)}
+                style={{ textAlign: "left" }}
               >
                 Hakkımızda
               </a>
@@ -138,6 +138,7 @@ const Navbar = () => {
                         className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
                         href="/salesandmarketing"
                         onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
                       >
                         Satış & Pazarlama
                       </a>
@@ -147,6 +148,7 @@ const Navbar = () => {
                         className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
                         href="/noro"
                         onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
                       >
                         Nöro Satış
                       </a>
@@ -156,6 +158,7 @@ const Navbar = () => {
                         className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
                         href="/timemanagement"
                         onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
                       >
                         Zaman Yönetimi
                       </a>
@@ -165,6 +168,7 @@ const Navbar = () => {
                         className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
                         href="/leadership"
                         onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
                       >
                         Liderlik
                       </a>
@@ -174,6 +178,7 @@ const Navbar = () => {
                         className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
                         href="/communucationskills"
                         onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
                       >
                         İletişim Becerileri
                       </a>
@@ -183,6 +188,7 @@ const Navbar = () => {
                         className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
                         href="/theartofsayingno"
                         onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
                       >
                         Hayır Diyebilme Sanatı
                       </a>
@@ -192,6 +198,7 @@ const Navbar = () => {
                         className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
                         href="/costmanagement"
                         onClick={() => setIsOpen(false)}
+                        style={{ textAlign: "left" }}
                       >
                         Maliyet Yönetimi
                       </a>
@@ -204,6 +211,7 @@ const Navbar = () => {
                       className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
                       href="/goalsetting"
                       onClick={() => setIsOpen(false)}
+                      style={{ textAlign: "left" }}
                     >
                       Hedef Belirleme
                     </a>
@@ -219,6 +227,7 @@ const Navbar = () => {
                     className="block w-full text-left px-5 py-1 hover:bg-gray-200 rounded"
                     href="/coaching"
                     onClick={() => setIsOpen(false)}
+                    style={{ textAlign: "left" }}
                   >
                     Koçluk
                   </a>
@@ -228,6 +237,7 @@ const Navbar = () => {
                     className="block w-full text-left px-5 py-1 hover:bg-gray-200 rounded"
                     href="/mentoring"
                     onClick={() => setIsOpen(false)}
+                    style={{ textAlign: "left" }}
                   >
                     Mentorluk
                   </a>
@@ -238,6 +248,7 @@ const Navbar = () => {
                       className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
                       href="/salesandmarketingconsultancy"
                       onClick={() => setIsOpen(false)}
+                      style={{ textAlign: "left" }}
                     >
                       Satış ve Pazarlama Danışmanlığı
                     </a>
@@ -247,6 +258,7 @@ const Navbar = () => {
                       className="block w-full text-left px-6 py-1 hover:bg-gray-200 rounded"
                       href="/exportconsultancy"
                       onClick={() => setIsOpen(false)}
+                      style={{ textAlign: "left" }}
                     >
                       İhracat Danışmanlığı
                     </a>
@@ -260,6 +272,7 @@ const Navbar = () => {
                 href="/textilesolutions"
                 className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
                 onClick={() => setIsOpen(false)}
+                style={{ textAlign: "left" }}
               >
                 Tekstil Çözümleri
               </a>
@@ -269,6 +282,7 @@ const Navbar = () => {
                 href="/contact"
                 className="block w-full text-left px-4 py-2 hover:bg-gray-200 rounded"
                 onClick={() => setIsOpen(false)}
+                style={{ textAlign: "left" }}
               >
                 İletişim
               </a>
