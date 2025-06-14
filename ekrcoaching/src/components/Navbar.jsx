@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import ekrlogo from "../assets/ekrlogo(tr2).png";
 import { IoIosArrowDown } from "react-icons/io";
-
-const Navbar = () => {
+import ing from "../assets/ing.png";
+import tr from "../assets/tr.png";
+import veriler from "../veriler";
+const Navbar = ({ datas, setdata }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [openMenus, setOpenMenus] = useState({});
 
@@ -49,14 +51,40 @@ const Navbar = () => {
     );
   };
 
+  const changelanguage = (event) => {
+    if (event.target.id == "turkish") {
+      setdata(veriler.turkish);
+      localStorage.setItem("language", "turkish");
+    } else {
+      setdata(veriler.english);
+      localStorage.setItem("language", "english");
+    }
+  };
+
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50 font-sans md:hidden h-18">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <div className="flex gap-2 ">
+          <img
+            src={tr}
+            className="w-7 h-7 cursor-pointer"
+            id="turkish"
+            onClick={changelanguage}
+            alt="Turkish"
+          />
+          <img
+            src={ing}
+            className="w-7 h-7 cursor-pointer"
+            id="english"
+            onClick={changelanguage}
+            alt="English"
+          />
+        </div>
+
         <div className="text-xl font-bold text-blue-600">
           <img className="w-[48px] h-[36px]" src={ekrlogo} alt="Logo" />
         </div>
-
-        <div className="md:hidden">
+        <div className="md:hidden flex gap-4 justify-center items-center">
           <label className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center relative">
             <input
               type="checkbox"
@@ -74,32 +102,32 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6 font-medium text-gray-700 text-sm">
           <li>
             <a href="/" className="hover:text-blue-600">
-              Anasayfa
+              {datas.Homepage}
             </a>
           </li>
           <li>
             <a href="/aboutus" className="hover:text-blue-600">
-              Hakkımızda
+              {datas.AboutUs}
             </a>
           </li>
           <li>
             <a href="#" className="hover:text-blue-600">
-              Eğitimler
+              {datas.Trainings}
             </a>
           </li>
           <li>
             <a href="#" className="hover:text-blue-600">
-              Hizmetler
+              {datas.Services}
             </a>
           </li>
           <li>
             <a href="#" className="hover:text-blue-600">
-              Tekstil Çözümleri
+              {datas.TextileSolutions}
             </a>
           </li>
           <li>
             <a href="#" className="hover:text-blue-600">
-              İletişim
+              {datas.Contact}
             </a>
           </li>
         </ul>
@@ -114,7 +142,7 @@ const Navbar = () => {
                 className="block px-4 py-2 hover:bg-gray-100 rounded"
                 onClick={() => setIsOpen(false)}
               >
-                Anasayfa
+                {datas.Homepage}
               </a>
             </li>
             <li>
@@ -123,13 +151,13 @@ const Navbar = () => {
                 className="block px-4 py-2 hover:bg-gray-100 rounded"
                 onClick={() => setIsOpen(false)}
               >
-                Hakkımızda
+                {datas.AboutUs}
               </a>
             </li>
 
-            <MenuItem label="Eğitimler">
+            <MenuItem label={datas.Trainings}>
               <>
-                <MenuItem label="Kurumsal" level={1}>
+                <MenuItem label={datas.Institutional} level={1}>
                   <>
                     <li>
                       <a
@@ -137,7 +165,7 @@ const Navbar = () => {
                         href="/salesandmarketing"
                         onClick={() => setIsOpen(false)}
                       >
-                        Satış & Pazarlama
+                        {datas.SalesMarketingTechniques}
                       </a>
                     </li>
                     <li>
@@ -146,7 +174,7 @@ const Navbar = () => {
                         href="/noro"
                         onClick={() => setIsOpen(false)}
                       >
-                        Nöro Satış
+                        {datas.NeuroSales}
                       </a>
                     </li>
                     <li>
@@ -155,7 +183,7 @@ const Navbar = () => {
                         href="/timemanagement"
                         onClick={() => setIsOpen(false)}
                       >
-                        Zaman Yönetimi
+                        {datas.TimeManagement}
                       </a>
                     </li>
                     <li>
@@ -164,7 +192,7 @@ const Navbar = () => {
                         href="/leadership"
                         onClick={() => setIsOpen(false)}
                       >
-                        Liderlik
+                        {datas.Leadership}
                       </a>
                     </li>
                     <li>
@@ -173,7 +201,7 @@ const Navbar = () => {
                         href="/communucationskills"
                         onClick={() => setIsOpen(false)}
                       >
-                        İletişim Becerileri
+                        {datas.CommunicationSkills}
                       </a>
                     </li>
                     <li>
@@ -182,7 +210,7 @@ const Navbar = () => {
                         href="/theartofsayingno"
                         onClick={() => setIsOpen(false)}
                       >
-                        Hayır Diyebilme Sanatı
+                        {datas.Theartofsayingno}
                       </a>
                     </li>
                     <li>
@@ -191,26 +219,26 @@ const Navbar = () => {
                         href="/costmanagement"
                         onClick={() => setIsOpen(false)}
                       >
-                        Maliyet Yönetimi
+                        {datas.Costmanagement}
                       </a>
                     </li>
                   </>
                 </MenuItem>
-                <MenuItem label="Bireysel" level={1}>
+                <MenuItem label={datas.Individual} level={1}>
                   <li>
                     <a
                       className="block px-6 py-1 hover:bg-gray-100 rounded"
                       href="/goalsetting"
                       onClick={() => setIsOpen(false)}
                     >
-                      Hedef Belirleme
+                      {datas.GoalSettingModelling}
                     </a>
                   </li>
                 </MenuItem>
               </>
             </MenuItem>
 
-            <MenuItem label="Hizmetler">
+            <MenuItem label={datas.Services}>
               <>
                 <li>
                   <a
@@ -218,7 +246,7 @@ const Navbar = () => {
                     href="/coaching"
                     onClick={() => setIsOpen(false)}
                   >
-                    Koçluk
+                    {datas.Coaching}
                   </a>
                 </li>
                 <li>
@@ -227,17 +255,17 @@ const Navbar = () => {
                     href="/mentoring"
                     onClick={() => setIsOpen(false)}
                   >
-                    Mentorluk
+                    {datas.Mentoring}
                   </a>
                 </li>
-                <MenuItem label="Danışmanlık" level={1}>
+                <MenuItem label={datas.Consulting} level={1}>
                   <li>
                     <a
                       className="block px-6 py-1 hover:bg-gray-100 rounded"
                       href="/salesandmarketingconsultancy"
                       onClick={() => setIsOpen(false)}
                     >
-                      Satış ve Pazarlama Danışmanlığı
+                      {datas.Salesandmarketingconsultancy}
                     </a>
                   </li>
                   <li>
@@ -246,7 +274,7 @@ const Navbar = () => {
                       href="/exportconsultancy"
                       onClick={() => setIsOpen(false)}
                     >
-                      İhracat Danışmanlığı
+                      {datas.Exportconsultancy}
                     </a>
                   </li>
                 </MenuItem>
@@ -259,7 +287,7 @@ const Navbar = () => {
                 className="block px-4 py-2 hover:bg-gray-100 rounded"
                 onClick={() => setIsOpen(false)}
               >
-                Tekstil Çözümleri
+                {datas.TextileSolutions}
               </a>
             </li>
             <li>
@@ -268,7 +296,7 @@ const Navbar = () => {
                 className="block px-4 py-2 hover:bg-gray-100 rounded"
                 onClick={() => setIsOpen(false)}
               >
-                İletişim
+                {datas.Contact}
               </a>
             </li>
           </ul>

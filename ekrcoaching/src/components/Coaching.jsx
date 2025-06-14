@@ -99,6 +99,7 @@ function Coaching({ datas }) {
           }}
         ></div>
       </div>
+      {/* mobil */}
       <div
         className="lg:hidden flex flex-col items-center h-[100vh] w-full text-white gap-y-10 relative"
         style={{
@@ -135,7 +136,7 @@ function Coaching({ datas }) {
           >
             {datas.Coachingtext3}
           </p>
-          <div>
+          <div className="ml-5">
             <li
               className="text-[3.5vw] italic"
               style={{ fontFamily: "Playfair Display, serif" }}

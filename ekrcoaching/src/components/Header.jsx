@@ -184,7 +184,7 @@ function Header({ datas, setdata }) {
           />
         </div>
       </div>
-      <Navbar datas={datas} />
+      <Navbar datas={datas} setdata={setdata} />
     </>
   );
 }
