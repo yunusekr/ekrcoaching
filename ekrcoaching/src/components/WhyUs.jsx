@@ -56,7 +56,7 @@ function WhyUs({ datas }) {
       <div className="container">
         <div className="row flex flex-col justify-center items-center">
           <div className="section-head col-sm-12">
-            <h4 className="font-[Lora]">
+            <h4 className="font-[Lora] text-center">
               <span
                 className="font-[Lora] text-[50px]"
                 style={{ textShadow: "0px 15px 4px rgba(0, 0, 0, 0.5)" }}
