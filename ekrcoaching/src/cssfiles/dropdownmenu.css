@@ -46,7 +46,7 @@ ol {
 /* Special styling for main menu items (Homepage, Individual, About Us) */
 .main_menu > ul > li > a {
   font-size: 18.5px;
-  padding: 10px 20px; /* Reduced padding for smaller overall size */
+  padding: 10px 30px; /* Reduced padding for smaller overall size */
   margin: 5px; /* Added margin for spacing */
   border-radius: 4px; /* Smaller border radius */
 }
