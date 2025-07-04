@@ -24,7 +24,7 @@ function Header({ datas, setdata }) {
   return (
     <>
       <div
-        className="w-full md:flex justify-center gap-[12rem] items-center z-[100] relative diagonal-div sticky top-0 bg-white fixed hidden"
+        className="w-full md:flex justify-center gap-[6rem] items-center z-[100] relative diagonal-div sticky top-0 bg-white fixed hidden"
         style={{
           boxShadow: "0px 0.5px 4px 0.5px black",
 
